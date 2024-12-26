@@ -1,0 +1,25 @@
+[
+  {
+    "type": "function",
+    "name": "setVrgdaParameters",
+    "inputs": [
+      {
+        "name": "_targetPrice",
+        "type": "int256",
+        "internalType": "int256"
+      },
+      {
+        "name": "_priceDecayPercent",
+        "type": "int256",
+        "internalType": "int256"
+      },
+      {
+        "name": "_perTimeUnit",
+        "type": "int256",
+        "internalType": "int256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+]

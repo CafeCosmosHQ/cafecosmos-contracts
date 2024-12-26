@@ -1,0 +1,155 @@
+[
+  {
+    "type": "function",
+    "name": "craftRecipe",
+    "inputs": [
+      {
+        "name": "landId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "output",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "createRecipe",
+    "inputs": [
+      {
+        "name": "recipe",
+        "type": "tuple",
+        "internalType": "struct CraftingRecipeDTO",
+        "components": [
+          {
+            "name": "output",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "outputQuantity",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "xp",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "exists",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "inputs",
+            "type": "uint256[]",
+            "internalType": "uint256[]"
+          },
+          {
+            "name": "quantities",
+            "type": "uint256[]",
+            "internalType": "uint256[]"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "createRecipes",
+    "inputs": [
+      {
+        "name": "recipes",
+        "type": "tuple[]",
+        "internalType": "struct CraftingRecipeDTO[]",
+        "components": [
+          {
+            "name": "output",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "outputQuantity",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "xp",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "exists",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "inputs",
+            "type": "uint256[]",
+            "internalType": "uint256[]"
+          },
+          {
+            "name": "quantities",
+            "type": "uint256[]",
+            "internalType": "uint256[]"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "removeRecipe",
+    "inputs": [
+      {
+        "name": "recipe",
+        "type": "tuple",
+        "internalType": "struct CraftingRecipeDTO",
+        "components": [
+          {
+            "name": "output",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "outputQuantity",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "xp",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "exists",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "inputs",
+            "type": "uint256[]",
+            "internalType": "uint256[]"
+          },
+          {
+            "name": "quantities",
+            "type": "uint256[]",
+            "internalType": "uint256[]"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+]

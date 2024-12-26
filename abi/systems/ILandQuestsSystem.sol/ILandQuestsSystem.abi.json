@@ -1,0 +1,403 @@
+[
+  {
+    "type": "function",
+    "name": "activateAllQuestGroups",
+    "inputs": [
+      {
+        "name": "landId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "activateLandQuestGroup",
+    "inputs": [
+      {
+        "name": "landId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "questGroupId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "getActiveLandQuestGroups",
+    "inputs": [
+      {
+        "name": "landId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct LandQuestGroupDTO[]",
+        "components": [
+          {
+            "name": "landId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "questGroupId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "landQuestGroup",
+            "type": "tuple",
+            "internalType": "struct LandQuestGroupData",
+            "components": [
+              {
+                "name": "active",
+                "type": "bool",
+                "internalType": "bool"
+              },
+              {
+                "name": "numberOfQuests",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "numberOfCompletedQuests",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "claimed",
+                "type": "bool",
+                "internalType": "bool"
+              },
+              {
+                "name": "expiresAt",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          {
+            "name": "landQuests",
+            "type": "tuple[]",
+            "internalType": "struct LandQuestDTO[]",
+            "components": [
+              {
+                "name": "landId",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "questGroupId",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "questId",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "landQuest",
+                "type": "tuple",
+                "internalType": "struct LandQuestData",
+                "components": [
+                  {
+                    "name": "numberOfTasks",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "numberOfCompletedTasks",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "claimed",
+                    "type": "bool",
+                    "internalType": "bool"
+                  },
+                  {
+                    "name": "active",
+                    "type": "bool",
+                    "internalType": "bool"
+                  },
+                  {
+                    "name": "expiresAt",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  }
+                ]
+              },
+              {
+                "name": "landQuestTasks",
+                "type": "tuple[]",
+                "internalType": "struct LandQuestTaskDTO[]",
+                "components": [
+                  {
+                    "name": "taskId",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                  },
+                  {
+                    "name": "landId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "questGroupId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "questId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "taskType",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "key",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                  },
+                  {
+                    "name": "quantity",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "landQuestTask",
+                    "type": "tuple",
+                    "internalType": "struct LandQuestTaskProgressData",
+                    "components": [
+                      {
+                        "name": "taskProgress",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                      },
+                      {
+                        "name": "taskCompleted",
+                        "type": "bool",
+                        "internalType": "bool"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getLandQuestGroup",
+    "inputs": [
+      {
+        "name": "landId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "questGroupId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct LandQuestGroupDTO",
+        "components": [
+          {
+            "name": "landId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "questGroupId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "landQuestGroup",
+            "type": "tuple",
+            "internalType": "struct LandQuestGroupData",
+            "components": [
+              {
+                "name": "active",
+                "type": "bool",
+                "internalType": "bool"
+              },
+              {
+                "name": "numberOfQuests",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "numberOfCompletedQuests",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "claimed",
+                "type": "bool",
+                "internalType": "bool"
+              },
+              {
+                "name": "expiresAt",
+                "type": "uint256",
+                "internalType": "uint256"
+              }
+            ]
+          },
+          {
+            "name": "landQuests",
+            "type": "tuple[]",
+            "internalType": "struct LandQuestDTO[]",
+            "components": [
+              {
+                "name": "landId",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "questGroupId",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "questId",
+                "type": "uint256",
+                "internalType": "uint256"
+              },
+              {
+                "name": "landQuest",
+                "type": "tuple",
+                "internalType": "struct LandQuestData",
+                "components": [
+                  {
+                    "name": "numberOfTasks",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "numberOfCompletedTasks",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "claimed",
+                    "type": "bool",
+                    "internalType": "bool"
+                  },
+                  {
+                    "name": "active",
+                    "type": "bool",
+                    "internalType": "bool"
+                  },
+                  {
+                    "name": "expiresAt",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  }
+                ]
+              },
+              {
+                "name": "landQuestTasks",
+                "type": "tuple[]",
+                "internalType": "struct LandQuestTaskDTO[]",
+                "components": [
+                  {
+                    "name": "taskId",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                  },
+                  {
+                    "name": "landId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "questGroupId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "questId",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "taskType",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "key",
+                    "type": "bytes32",
+                    "internalType": "bytes32"
+                  },
+                  {
+                    "name": "quantity",
+                    "type": "uint256",
+                    "internalType": "uint256"
+                  },
+                  {
+                    "name": "landQuestTask",
+                    "type": "tuple",
+                    "internalType": "struct LandQuestTaskProgressData",
+                    "components": [
+                      {
+                        "name": "taskProgress",
+                        "type": "uint256",
+                        "internalType": "uint256"
+                      },
+                      {
+                        "name": "taskCompleted",
+                        "type": "bool",
+                        "internalType": "bool"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "removeAllExpiredQuestGroups",
+    "inputs": [
+      {
+        "name": "landId",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+]

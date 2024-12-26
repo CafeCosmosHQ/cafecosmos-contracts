@@ -1,0 +1,142 @@
+[
+  {
+    "type": "function",
+    "name": "createUserTestScerarioLand",
+    "inputs": [
+      {
+        "name": "player",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "limitX",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "limitY",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "landItems",
+        "type": "tuple[]",
+        "internalType": "struct LandItemDTO[]",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "itemId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "placementTime",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "stackIndex",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "isRotated",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "dynamicUnlockTime",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "dynamicTimeoutTime",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "resetUserTestLandScenario",
+    "inputs": [
+      {
+        "name": "landId",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "limitX",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "limitY",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "landItems",
+        "type": "tuple[]",
+        "internalType": "struct LandItemDTO[]",
+        "components": [
+          {
+            "name": "x",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "y",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "itemId",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "placementTime",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "stackIndex",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "isRotated",
+            "type": "bool",
+            "internalType": "bool"
+          },
+          {
+            "name": "dynamicUnlockTime",
+            "type": "uint256",
+            "internalType": "uint256"
+          },
+          {
+            "name": "dynamicTimeoutTime",
+            "type": "uint256",
+            "internalType": "uint256"
+          }
+        ]
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  }
+]
