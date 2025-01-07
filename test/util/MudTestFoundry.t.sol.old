@@ -1,0 +1,340 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.13;
+
+// import MUD core
+import { World } from "@latticexyz/world/src/World.sol";
+import { IWorld } from "../../src/codegen/world/IWorld.sol";
+import { WorldFactory } from "@latticexyz/world/src/WorldFactory.sol";
+import { IModule } from "@latticexyz/world/src/IModule.sol";
+import { Module } from "@latticexyz/world/src/Module.sol";
+import { InitModule } from "@latticexyz/world/src/modules/init/InitModule.sol";
+import { AccessManagementSystem } from "@latticexyz/world/src/modules/init/implementations/AccessManagementSystem.sol";
+import { BalanceTransferSystem } from "@latticexyz/world/src/modules/init/implementations/BalanceTransferSystem.sol";
+import { BatchCallSystem } from "@latticexyz/world/src/modules/init/implementations/BatchCallSystem.sol";
+import { RegistrationSystem } from "@latticexyz/world/src/modules/init/RegistrationSystem.sol";
+import { StoreSwitch } from "@latticexyz/store/src/StoreSwitch.sol";
+import { Test } from "forge-std/test.sol";
+import { ResourceId, WorldResourceIdLib } from "@latticexyz/world/src/WorldResourceId.sol";
+import { RESOURCE_SYSTEM } from "@latticexyz/world/src/worldResourceTypes.sol";
+import { WorldContextProviderLib } from "@latticexyz/world/src/WorldContext.sol";
+import { System } from "@latticexyz/world/src/System.sol";
+import { WorldRegistrationSystem } from "@latticexyz/world/src/modules/init/implementations/WorldRegistrationSystem.sol";
+import { ResourceIdLib } from "@latticexyz/store/src/ResourceId.sol";
+import { StoreCore } from "@latticexyz/store/src/StoreCore.sol";
+import "forge-std/console.sol";
+import { MudTest } from "@latticexyz/world/test/MudTest.t.sol";
+
+// Import system contracts
+import { CraftingSystem } from "../../src/systems/CraftingSystem.sol";
+import { LandConfigSystem } from "../../src/systems/LandConfigSystem.sol";
+import { LandCreationSystem } from "../../src/systems/LandCreationSystem.sol";
+import { LandERC1155HolderSystem } from "../../src/systems/LandERC1155HolderSystem.sol";
+import { LandItemInteractionSystem } from "../../src/systems/LandItemInteractionSystem.sol";
+import { LandItemsSystem } from "../../src/systems/LandItemsSystem.sol";
+import { LandScenarioUserTestingSystem } from "../../src/systems/LandScenarioUserTestingSystem.sol";
+import { LandTablesAndChairsContract } from "../../src/systems/LandTablesAndChairsContract.sol";
+import { LandTokensSystem } from "../../src/systems/LandTokensSystem.sol";
+import { LandTransform } from "../../src/systems/LandTransform.sol";
+import { LandViewSystem } from "../../src/systems/LandViewSystem.sol";
+import { RootAccessOperator } from "../../src/systems/RootAccessOperator.sol";
+import { WaterControllerSystem } from "../../src/systems/WaterControllerSystem.sol";
+import { ROOT_NAMESPACE } from "@latticexyz/world/src/constants.sol";
+import { FieldLayout } from "@latticexyz/store/src/FieldLayout.sol";
+import { WorldResourceIdInstance } from "@latticexyz/world/src/WorldResourceId.sol";
+
+//import tables
+import { ActiveStoves } from "../../src/codegen/tables/ActiveStoves.sol";
+import { CafeCosmosConfig } from "../../src/codegen/tables/CafeCosmosConfig.sol";
+import { ConfigAddresses } from "../../src/codegen/tables/ConfigAddresses.sol";
+import { Inventory } from "../../src/codegen/tables/Inventory.sol";
+import { ItemInfo } from "../../src/codegen/tables/ItemInfo.sol";
+import { LandCell } from "../../src/codegen/tables/LandCell.sol";
+import { LandInfo } from "../../src/codegen/tables/LandInfo.sol";
+import { LandItem } from "../../src/codegen/tables/LandItem.sol";
+import { LandItemCookingState } from "../../src/codegen/tables/LandItemCookingState.sol";
+import { LandPermissions } from "../../src/codegen/tables/LandPermissions.sol";
+import { StackableItem } from "../../src/codegen/tables/StackableItem.sol";
+import { WaterController } from "../../src/codegen/tables/WaterController.sol";
+import { LandTablesAndChairs } from "../../src/codegen/tables/LandTablesAndChairs.sol";
+
+//import external contracts
+import { Redistributor } from "../../src/Redistributor.sol";
+import { Vesting } from "../../src/Vesting.sol";
+import { Items } from "../../src/tokens/Items.sol";
+import { SoftToken } from "../../src/tokens/SoftToken.sol";
+import { LandNFTs } from "../../src/tokens/LandNFTs.sol";
+// import { PerlinItemConfig } from "../../src/PerlinItemConfig.sol";
+// import { LandTransform } from "../../src/systems/LandTransform.sol";
+// import { Transformations } from "../../../src/Transformations.sol";
+
+contract MudTestFoundryOld is Test {
+    IWorld internal world;
+    address internal worldAddress;
+    address private registrationSystemAddress;
+
+    bytes salt = abi.encodePacked(uint256(1337));
+
+    using WorldResourceIdInstance for ResourceId;
+
+    mapping(bytes32 => string[]) public functionSelector;
+
+    // ---- Settings ----
+    //land settings
+    uint256 constant LAND_X = 3;
+    uint256 constant LAND_Y = 3;
+    uint256 constant SCALE = 1;
+    uint256 constant COOKINGCOST = 10;
+
+    // //VRGDA
+    // int256 constant targetPrice = 100;
+    // int256 constant priceDecayPercent = 0.31e18;
+    // int256 constant perTimeUnit = 2e18;
+
+    uint160 constant SEED_MASK = (1 << 32) - 1;
+    // uint256 constant DEFAULT_LAND_TYPE = 0;
+
+    // enum RedistributorCategories {mains, drinks, desserts}
+    // RedistributorCategories foodCategories;
+
+    function addFunctionSelector(bytes32 key, string memory value) private {
+        functionSelector[key].push(value);
+    }
+
+    function setUp() public virtual {
+
+        RegistrationSystem registrationSystem = new RegistrationSystem();
+        registrationSystemAddress = address(registrationSystem);
+        
+        InitModule initModule = new InitModule(new AccessManagementSystem(),
+                                               new BalanceTransferSystem(), 
+                                               new BatchCallSystem(), 
+                                               registrationSystem);
+        WorldFactory factory = new WorldFactory(initModule);
+        world = IWorld(factory.deployWorld(salt));
+        worldAddress = address(world);
+
+        StoreSwitch.setStoreAddress(address(world));
+
+        // Register tables
+        ActiveStoves.register();
+        CafeCosmosConfig.register();
+        Inventory.register();
+        ItemInfo.register();
+        LandCell.register();
+        LandInfo.register();
+        LandItem.register();
+        LandItemCookingState.register();
+        LandPermissions.register();
+        LandTablesAndChairs.register();
+        StackableItem.register();
+        WaterController.register();
+
+        setupFunctionSelectors();
+        
+        _registerSystem(new CraftingSystem(), "Crafting", true);
+        _registerSystem(new LandConfigSystem(), "LandConfig", true);
+        _registerSystem(new LandCreationSystem(), "LandCreation", true);
+        _registerSystem(new LandERC1155HolderSystem(), "LandERC1155Holder", true);
+        _registerSystem(new LandItemInteractionSystem(), "LandItemInteraction", true);
+        _registerSystem(new LandItemsSystem(), "LandItems", true);
+        _registerSystem(new LandScenarioUserTestingSystem(), "LandScenarioUserTesting", true);
+        _registerSystem(new LandTokensSystem(), "LandTokens", true);
+        _registerSystem(new LandViewSystem(), "LandView", true);
+        _registerSystem(new WaterControllerSystem(), "WaterController", true);
+
+        postDeploy();
+    }
+
+    function postDeploy() internal {
+
+        SoftToken softToken = new SoftToken("SOFT", "SOFT");
+        LandNFTs landNFTs = new LandNFTs("LAND", "LAND");
+        Items items = new Items("http://ipfs.io/");
+        Redistributor redistributor = new Redistributor(address(softToken), worldAddress);
+        Vesting vesting = new Vesting(address(redistributor), address(softToken));
+        // PerlinItemConfig perlinItemConfig = new PerlinItemConfig();
+        LandTransform landTransform = new LandTransform();
+        LandTablesAndChairsContract landTablesAndChairsContract = new LandTablesAndChairsContract();
+        // Transformations transformations = new Transformations();
+
+        landNFTs.setLand(worldAddress);
+        items.setMinter(worldAddress, true);
+        redistributor.setLandAddress(worldAddress);
+        ConfigAddresses.setSoftTokenAddress(address(softToken));
+        ConfigAddresses.setLandNFTsAddress(address(landNFTs));
+        ConfigAddresses.setSoftDestinationAddress(address(vesting));
+        ConfigAddresses.setRedistributorAddress(address(redistributor));
+        ConfigAddresses.setVestingAddress(address(vesting));
+        // ConfigAddresses.setPerlinItemConfigAddress(address(perlinItemConfig));
+        ConfigAddresses.setLandTransformAddress(address(landTransform));
+        ConfigAddresses.setLandTablesAndChairsAddress(address(landTablesAndChairsContract));
+        // CafeCosmosConfig.setTransformationsAddress(address(transformations));
+
+        CafeCosmosConfig.setInitialLimitX(LAND_X);
+        CafeCosmosConfig.setInitialLimitY(LAND_Y);
+        CafeCosmosConfig.setSeedMask(SEED_MASK);
+        CafeCosmosConfig.setChunkSize(100);
+
+        //tools
+        uint256[] memory startingTools = new uint256[](5);
+        startingTools[0] = 1010;
+        startingTools[1] = 110;
+        startingTools[2] = 111;
+        startingTools[3] = 112;
+        startingTools[4] = 108;
+        
+        CafeCosmosConfig.setStartingItems(startingTools);
+
+        uint256[] memory startingToolsQuantities = new uint256[](5);
+        startingToolsQuantities[0] = 1;
+        startingToolsQuantities[1] = 1;
+        startingToolsQuantities[2] = 1;
+        startingToolsQuantities[3] = 1;
+        startingToolsQuantities[4] = 1;
+
+        CafeCosmosConfig.setStartingItemsQuantities(startingToolsQuantities);
+                
+        //redistributor
+        redistributor.createSubSection(65, "mains");
+        redistributor.createSubSection(25, "desserts"); 
+        redistributor.createSubSection(10, "drinks");
+    }
+
+    function _registerSystem(System systemContract, bytes32 systemName, bool publicAccess) internal {
+        bytes16 systemName16 = truncateString(systemName);
+        ResourceId systemId = WorldResourceIdLib.encode({
+            typeId: RESOURCE_SYSTEM,
+            namespace: "",
+            name: systemName16
+        });
+        world.registerSystem(systemId, systemContract, publicAccess);
+        for (uint i = 0; i < functionSelector[systemName].length; i++) {
+            world.registerRootFunctionSelector(systemId, functionSelector[systemName][i], functionSelector[systemName][i]);
+        }
+    }
+
+    function truncateString(bytes32 strBytes) internal pure returns (bytes16) {
+        bytes16 truncated;
+
+        // Copy up to 16 bytes of the input string
+        for (uint i = 0; i < 16; i++) {
+            if (i < strBytes.length) {
+                truncated |= bytes16(strBytes[i] & 0xFF) >> (i * 8);
+            }
+        }
+
+        return truncated;
+    }
+
+    function testDeploy() public {
+        assertTrue(true);
+    }
+
+    function setupFunctionSelectors() private {
+        addFunctionSelector("LandItemInteraction", "placeItem(uint256 landId, uint256 x, uint256 y, uint256 itemId)");
+        addFunctionSelector("LandItemInteraction", "removeItem(uint256 landId, uint256 x, uint256 y)");
+        addFunctionSelector("LandItemInteraction", "moveItem(uint256 landId, uint256 srcX, uint256 srcY, uint256 dstX, uint256 dstY)");
+        addFunctionSelector("LandItemInteraction", "updateStove(uint256 landId, uint256 x, uint256 y)");
+        addFunctionSelector("LandItemInteraction", "toggleRotation(uint256 landId, uint256 x, uint256 y, uint256 z)");
+        
+        addFunctionSelector("Crafting", "craftRecipe(uint256,uint256[3][3])");
+        addFunctionSelector("Crafting", "createRecipes(CraftingRecipe[])");
+        addFunctionSelector("Crafting", "createRecipe(uint256[3][3],uint256)");
+        addFunctionSelector("Crafting", "removeRecipe(uint256[3][3])");
+        addFunctionSelector("Crafting", "craftCheck(uint256[3][3])");
+        addFunctionSelector("Crafting", "setReturnItems(uint256[],uint256[])");
+        addFunctionSelector("Crafting", "setReturnsItem(uint256,uint256)");
+        
+        addFunctionSelector("LandConfig", "getLandInfo(uint256)");
+        addFunctionSelector("LandConfig", "setItemConfigAddress(address)");
+        addFunctionSelector("LandConfig", "setTransformationAddress(address)");
+        addFunctionSelector("LandConfig", "setLandTransformAddress(address)");
+        addFunctionSelector("LandConfig", "setLandTablesAndChairsAddress(address)");
+        addFunctionSelector("LandConfig", "setSoftToken(address)");
+        addFunctionSelector("LandConfig", "getSoftToken()");
+        addFunctionSelector("LandConfig", "setSoftCost(uint256)");
+        addFunctionSelector("LandConfig", "setSoftDestination(address)");
+        addFunctionSelector("LandConfig", "setRedistributor(address)");
+        addFunctionSelector("LandConfig", "setLandNFTs(address)");
+        addFunctionSelector("LandConfig", "setCookingCost(uint256)");
+        addFunctionSelector("LandConfig", "setVesting(address)");
+        addFunctionSelector("LandConfig", "setChunkSize(uint256)");
+        addFunctionSelector("LandConfig", "getSoftCostPerSquare()");
+        addFunctionSelector("LandConfig", "getSoftDestinationAddress()");
+        addFunctionSelector("LandConfig", "getLandTablesAndChairsAddress()");
+        addFunctionSelector("LandConfig", "setItems(ItemInfoRecord[])");
+        addFunctionSelector("LandConfig", "setIsStackable(uint256,uint256,bool)");
+        addFunctionSelector("LandConfig", "setStackableItems(StackableItemVO[])");
+        addFunctionSelector("LandConfig", "getCookingCost()");
+        addFunctionSelector("LandConfig", "getActiveStoves(uint256)");
+        addFunctionSelector("LandConfig", "setItems(address)");
+        addFunctionSelector("LandConfig", "approveLandOperator(uint256,address,bool)");
+        addFunctionSelector("LandConfig", "setMinStartingLimits(uint256,uint256)");
+        addFunctionSelector("LandConfig", "setNonRemovableItems(uint256[])");
+        addFunctionSelector("LandConfig", "setNonRemovable(uint256,bool)");
+        addFunctionSelector("LandConfig", "setNonPlaceableItems(uint256[])");
+        addFunctionSelector("LandConfig", "setNonPlaceable(uint256,bool)");
+        addFunctionSelector("LandConfig", "setTable(uint256,bool)");
+        addFunctionSelector("LandConfig", "setChair(uint256,bool)");
+        addFunctionSelector("LandConfig", "setTool(uint256,bool)");
+        addFunctionSelector("LandConfig", "setRotatable(uint256[],bool)");
+
+        addFunctionSelector("LandCreation", "setInitialLandLimits(uint256,uint256)");
+        addFunctionSelector("LandCreation", "setInitialLandItems(InitialLandItem[],uint256,uint256)");
+        addFunctionSelector("LandCreation", "createPlayerInitialFreeLand()");
+        addFunctionSelector("LandCreation", "createLand(uint256,uint256)");
+        addFunctionSelector("LandCreation", "expandLand(uint256,uint256,uint256)");
+        addFunctionSelector("LandCreation", "generateChunk(uint256)");
+        addFunctionSelector("LandCreation", "calculateLandCost(uint256,uint256)");
+        addFunctionSelector("LandCreation", "calculateLandCost(uint256,uint256,uint256)");
+
+        addFunctionSelector("LandERC1155Holder", "supportsInterface(bytes4)");
+
+        addFunctionSelector("LandItemInteraction", "placeItem(uint256,uint256,uint256,uint256)");
+        addFunctionSelector("LandItemInteraction", "removeItem(uint256,uint256,uint256)");
+        addFunctionSelector("LandItemInteraction", "moveItem(uint256,uint256,uint256,uint256,uint256)");
+        addFunctionSelector("LandItemInteraction", "updateStove(uint256,uint256,uint256)");
+        addFunctionSelector("LandItemInteraction", "toggleRotation(uint256,uint256,uint256,uint256)");
+
+        addFunctionSelector("LandItems", "itemBalanceOf(uint256,uint256)");
+        addFunctionSelector("LandItems", "itemBalanceOfBatch(uint256,uint256[])");
+        addFunctionSelector("LandItems", "depositItems(uint256,uint256[],uint256[])");
+        addFunctionSelector("LandItems", "withdrawItems(uint256,uint256[],uint256[])");
+
+        addFunctionSelector("LandScenarioUserTesting","resetUserTestLandScenario(uint256,uint256,uint256,LandItemVO[])");
+        addFunctionSelector("LandScenarioUserTesting","createUserTestScerarioLand(address,uint256,uint256,LandItemVO[])");
+
+        addFunctionSelector("LandTokens", "tokenBalanceOf(uint256)");
+        addFunctionSelector("LandTokens", "depositTokens(uint256,uint256)");
+        addFunctionSelector("LandTokens", "withdrawTokens(uint256,uint256)");
+
+        addFunctionSelector("LandView", "getLandItems(uint256,uint256,uint256)");
+        addFunctionSelector("LandView", "getRotation(uint256,uint256,uint256)");
+        addFunctionSelector("LandView", "getPlacementTime(uint256,uint256,uint256)");
+        addFunctionSelector("LandView", "getActiveTables(uint256)");
+        addFunctionSelector("LandView", "getTablesOfChairs(uint256,uint256,uint256)");
+        addFunctionSelector("LandView", "getChairsOfTables(uint256,uint256,uint256)");
+        addFunctionSelector("LandView", "getLandItems3d(uint256)");
+
+        addFunctionSelector("WaterController", "InitialiseWaterController(address,uint64,bytes32)");
+        addFunctionSelector("WaterController", "axiomV2QueryAddress()");
+        addFunctionSelector("WaterController", "setAxionV2QueryAddress(address)");
+        addFunctionSelector("WaterController", "axiomV2Callback(uint64,address,bytes32,uint256,bytes32[],bytes)");
+        addFunctionSelector("WaterController", "axiomV2OffchainCallback(uint64,address,bytes32,uint256,bytes32[],bytes)");
+        addFunctionSelector("WaterController", "getWaterYieldTime()");
+        addFunctionSelector("WaterController", "setWaterControllerParameters(uint256,uint256,uint256,uint256,uint256,int256,int256)");
+    } 
+
+    // function testCreateLand() public {
+    //     world.createPlayerInitialFreeLand();
+    // }
+
+    // function testFunctionSelectors() public {
+    //     vm.expectRevert("ERC721: invalid token ID");
+    //     world.placeItem(0, 0, 0, 0);
+    // }
+
+    function test_tableRegistry() public {
+        assertEq(CafeCosmosConfig.getCookingCost(), 0);
+    }
+}

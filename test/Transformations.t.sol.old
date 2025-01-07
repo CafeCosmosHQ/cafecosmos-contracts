@@ -1,0 +1,147 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
+import {console} from "forge-std/Test.sol";
+import {CafeCosmosTest} from "./util/CafeCosmosTest.sol";
+import {TransformationDTO} from "../src/libraries/Types.sol";
+import {LandTablesAndChairs} from "../src/systems/LandTablesAndChairsContract.sol";
+import {LandTransform} from "../src/systems/LandTransform.sol";
+import {PerlinItemConfig} from "../src/PerlinItemConfig.sol";
+import {SoftToken} from "../src/tokens/SoftToken.sol";
+import {Items} from "../src/tokens/Items.sol";
+import {MI} from "./MockItems.sol";
+import {LandNFTs} from "../src/tokens/LandNFTs.sol";
+
+contract Mock1155Receiver is ERC1155Receiver {
+    
+    function onERC1155Received(
+        address _operator,
+        address _from,
+        uint256 _id,
+        uint256 _value,
+        bytes calldata _data
+    ) external override returns (bytes4) {
+        return ERC1155_ACCEPTED;
+    }
+
+    function onERC1155BatchReceived(
+        address _operator,
+        address _from,
+        uint256[] calldata _ids,
+        uint256[] calldata _values,
+        bytes calldata _data
+    ) external override returns (bytes4) {
+        return ERC1155_BATCH_ACCEPTED;
+    }
+
+}
+
+
+contract TransformationsTest is CafeCosmosTest, Mock1155Receiver {
+
+
+    uint256 COW_MILKING = 92;
+    uint256 BUCKET_MILK = 93;
+
+    address bob = address(0xB);
+
+    uint256 landId;
+    uint256 landId_bob;
+
+    function setUp() public {
+
+        TransformationDTO memory newTransformation = TransformationDTO(
+            MI.COW, // base 
+            MI.BUCKET, // input 
+            COW_MILKING, // next 
+            BUCKET_MILK, // yield 
+            0, // input next
+            1, // yieldQuantity 
+            0, // unlockTime 
+            0, // timeout 
+            0,   // timeoutYield 
+            0, // timeoutYieldQuantity 
+            0, // timeoutNext 
+            false, // isRecipe 
+            false, // isWaterCollection 
+            true // exists 
+        );
+
+        TransformationDTO memory newTransformation2 = TransformationDTO(
+            COW_MILKING, // base 
+            MI.BUCKET, // input 
+            COW_MILKING, // next 
+            BUCKET_MILK, // yield 
+            0, // input next
+            1, // yieldQuantity 
+            1000, // unlockTime 
+            5000, // timeout 
+            0,   // timeoutYield 
+            0, // timeoutYieldQuantity 
+            0, // timeoutNext 
+            false, // isRecipe 
+            false, // isWaterCollection 
+            true // exists 
+        );
+
+        transformations.setTransformation(newTransformation);
+        transformations.setTransformation(newTransformation2);
+
+        
+        uint256 soft_cost = world.calculateLandCost(LAND_X, LAND_Y);
+        softToken.approve(worldAddress, soft_cost);
+        landId = world.createLand(LAND_X, LAND_Y);
+        items.setApprovalForAll(worldAddress, true);
+        uint256[] memory itemIds = new uint256[](2);
+        itemIds[0] = MI.COW;
+        itemIds[1] = MI.BUCKET;
+        uint256[] memory quantities = new uint256[](2);
+        quantities[0] = 1;
+        quantities[1] = 3;
+        // items.mintBatch(address(this), itemIds, quantities, "0x003");
+        
+        //initialize bob
+        softToken.transfer(bob, soft_cost);
+        items.mintBatch(bob, itemIds, quantities, "0x003");
+        vm.startPrank(bob);
+        
+        softToken.approve(worldAddress, soft_cost);
+        landId_bob = world.createLand(LAND_X, LAND_Y);
+        world.depositItems(landId_bob, itemIds, quantities);
+
+        items.setApprovalForAll(worldAddress, true);
+
+    }
+
+    function testTransformations() public {
+        assertEq(landNFTs.ownerOf(landId_bob), bob);
+        assertEq(world.itemBalanceOf(landId_bob, MI.COW), 1);
+        assertEq(world.itemBalanceOf(landId_bob, MI.BUCKET), 3);
+        
+        world.placeItem(landId_bob, 0, 0, MI.COW);
+        world.placeItem(landId_bob, 0, 0, MI.BUCKET);
+        
+        assertEq(world.itemBalanceOf(landId_bob, MI.COW), 0);
+        assertEq(world.itemBalanceOf(landId_bob, BUCKET_MILK), 1);
+        assertEq(world.itemBalanceOf(landId_bob, MI.BUCKET), 2);
+        assertEq(world.getItemAt(landId_bob, 0, 0), COW_MILKING);
+        
+        vm.expectRevert();
+        world.placeItem(landId_bob, 0, 0, MI.BUCKET);
+        
+        vm.warp(1002);
+        world.placeItem(landId_bob, 0, 0, MI.BUCKET);
+        
+        assertEq(world.itemBalanceOf(landId_bob, MI.BUCKET), 1);
+        assertEq(world.itemBalanceOf(landId_bob, BUCKET_MILK), 2);
+        assertEq(world.getItemAt(landId_bob, 0, 0), COW_MILKING);
+
+        vm.expectRevert();
+        world.placeItem(landId_bob, 0, 0, MI.BUCKET);
+
+        vm.warp(block.timestamp + 1002);
+        world.placeItem(landId_bob, 0, 0, MI.BUCKET);
+    }
+    
+}

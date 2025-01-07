@@ -1,0 +1,57 @@
+import {Test, console2} from "forge-std/Test.sol";
+import {CafeCosmosTest} from "./util/CafeCosmosTest.sol";
+
+
+contract PerlinItemConfigTest is CafeCosmosTest 
+{
+    address internal alice = 0x12890d2cCe102216644C59DAE5baeD380d848302;
+    address internal softDestination = 0x12890D2cCe102216644c59DaE5Baed380D848301;
+   
+
+
+    address internal amalia = 0xe919Cc7bEA733bf4Cf3c60E85305b4eFf0059326;
+    
+    function setUp() public {
+        
+        emit log_address(address(this));
+        perlinItemConfig.setItem(1, 14, 1);
+        perlinItemConfig.setItem(2, 14, 2);
+    }
+
+    
+   /**
+   * forge-config: default.fuzz.runs = 4024
+   * forge-config: default.fuzz.max-test-rejects = 2
+   */
+    function test_Fuzz_CalculatePerlin(uint32 x, uint32 y, uint32 seed) view public {
+        
+       perlinItemConfig.calculatePerlin(x, y, seed);
+    }
+
+      
+   /**
+   * forge-config: default.fuzz.runs = 10024
+   * forge-config: default.fuzz.max-test-rejects = 2
+   */
+    function test_Fuzz_CalculateGetItem(uint32 x, uint32 y, uint32 seed) view public {
+        
+       perlinItemConfig.calculatePerlinAndGetItem(x, y, seed);
+    }
+
+
+    /**
+    * forge-config: default.fuzz.runs = 1024
+    * forge-config: default.fuzz.max-test-rejects = 2
+    */
+
+     function test_FuzzCalculateGetItem10x10Items(uint32 seed) view public {
+        
+       for(uint32 x = 0; x < 10; x++) {
+           for(uint32 y = 0; y < 10; y++) {
+               perlinItemConfig.calculatePerlinAndGetItem(x, y, seed);
+           }
+       }
+    }
+
+
+}

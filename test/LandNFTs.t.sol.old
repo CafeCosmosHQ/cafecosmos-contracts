@@ -1,0 +1,217 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import {CafeCosmosTest} from "./util/CafeCosmosTest.sol";
+import {MI} from "./MockItems.sol";
+import "forge-std/console.sol";
+
+contract LandNFTsTest is CafeCosmosTest {
+    
+    address public bob = address(0x0b);
+    address public claire = address(0x0c);
+    address public danny = address(0x0d);
+
+    uint256 public bob_landId;
+    uint256 public claire_landId;
+
+    function setUp() public override {
+        super.setUp();
+        bob_landId = setupPlayer(bob);
+        claire_landId = setupPlayer(claire);
+    }
+
+    function test_createLand() public {
+        assertEq(bob_landId, 1);
+        assertEq(claire_landId, 2);
+    }
+
+    function test_depositItems() public {    
+        uint256[] memory itemIds = new uint256[](1);
+        itemIds[0] = MI.AVOCADO;
+
+        uint256[] memory quantities = new uint256[](1);
+        quantities[0] = 1;
+
+        items.mintBatch(bob, itemIds, quantities, "0x003");
+        items.mintBatch(claire, itemIds, quantities, "0x003");
+        
+        vm.prank(claire);
+        vm.expectRevert("LandStorageBase: You are not an operator to this land");
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        vm.prank(bob);
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        vm.prank(bob);
+        world.approveLandOperator(bob_landId, claire, true);
+
+        vm.prank(claire);
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        vm.prank(bob);
+        landNFTs.transferFrom(bob, danny, bob_landId);
+
+        vm.startPrank(bob);
+        vm.expectRevert("LandStorageBase: You are not an operator to this land");
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        vm.expectRevert("LandStorageBase: You are not an operator to this land");
+        world.expandLand(bob_landId, 1, 1);
+        vm.stopPrank();
+
+        items.mintBatch(claire, itemIds, quantities, "0x003");
+
+        vm.prank(claire);
+        vm.expectRevert("LandStorageBase: You are not an operator to this land");
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        vm.prank(danny);
+        landNFTs.transferFrom(danny, bob, bob_landId);
+
+        items.mintBatch(bob, itemIds, quantities, "0x003");
+
+        vm.prank(bob);
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        assertEq(items.balanceOf(bob, MI.AVOCADO), 0);
+        assertEq(world.itemBalanceOf(bob_landId, MI.AVOCADO), 3);
+
+        vm.prank(claire);
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        assertEq(world.itemBalanceOf(bob_landId, MI.AVOCADO), 4);
+
+    } 
+
+    function test_withdrawItems() public {
+        uint256[] memory itemIds = new uint256[](1);
+        itemIds[0] = MI.AVOCADO;
+
+        uint256[] memory quantities = new uint256[](1);
+        quantities[0] = 1;
+
+        items.mintBatch(bob, itemIds, quantities, "0x003");
+
+        vm.prank(bob);
+        world.depositItems(bob_landId, itemIds, quantities);
+
+        vm.prank(bob);
+        world.approveLandOperator(bob_landId, claire, true);
+
+        vm.prank(danny);
+        vm.expectRevert("LandStorageBase: You are not an operator to this land");
+        world.withdrawItems(bob_landId, itemIds, quantities);
+
+        assertEq(items.balanceOf(bob, MI.AVOCADO), 0);
+        
+        vm.prank(claire);
+        world.withdrawItems(bob_landId, itemIds, quantities);
+
+        assertEq(items.balanceOf(bob, MI.AVOCADO), 1);
+        assertEq(items.balanceOf(claire, MI.AVOCADO), 0);
+
+        vm.startPrank(bob);
+        world.depositItems(bob_landId, itemIds, quantities);
+        
+        assertEq(items.balanceOf(bob, MI.AVOCADO), 0);
+        
+        world.withdrawItems(bob_landId, itemIds, quantities);
+        vm.stopPrank();
+
+        assertEq(items.balanceOf(bob, MI.AVOCADO), 1);
+
+        itemIds[0] = MI.CHAIR;
+
+        vm.prank(claire);
+        vm.expectRevert("ERC1155: insufficient balance for transfer");
+        world.depositItems(bob_landId, itemIds, quantities);
+        
+        vm.prank(bob);
+        vm.expectRevert("ERC1155: insufficient balance for transfer");
+        world.depositItems(bob_landId, itemIds, quantities);
+    }
+
+    function test_depositTokens() public {
+        softToken.transfer(bob, 100);
+        softToken.transfer(claire, 50);
+        
+        vm.startPrank(bob);
+        softToken.approve(worldAddress, 100);
+        world.depositTokens(bob_landId, 100);
+        vm.stopPrank();
+
+        assertEq(world.tokenBalanceOf(bob_landId), 100);
+
+        vm.startPrank(claire);
+        vm.expectRevert("LandStorageBase: You are not an operator to this land");
+        world.depositTokens(bob_landId, 100);
+        vm.stopPrank();
+
+        vm.prank(bob);
+        world.approveLandOperator(bob_landId, claire, true);
+
+        vm.startPrank(claire);
+        softToken.approve(worldAddress, 50);
+        world.depositTokens(bob_landId, 50);
+        vm.stopPrank();
+
+        assertEq(world.tokenBalanceOf(bob_landId), 150);
+
+        vm.startPrank(bob);
+        vm.expectRevert("ERC20: insufficient allowance");
+        world.depositTokens(bob_landId, 1e19);
+
+        softToken.approve(worldAddress, 1e19);
+        vm.expectRevert("ERC20: transfer amount exceeds balance");
+        world.depositTokens(bob_landId, 1e19);
+    }
+
+    function test_withdrawTokens() public {
+        softToken.transfer(bob, 100);
+
+        assertEq(softToken.balanceOf(bob), 100);
+        assertEq(world.tokenBalanceOf(bob_landId), 0);
+
+        vm.startPrank(bob);
+        softToken.approve(worldAddress, 100);
+        world.depositTokens(bob_landId, 100);
+        world.approveLandOperator(bob_landId, claire, true);
+        vm.stopPrank();
+
+        vm.prank(danny);
+        vm.expectRevert("LandStorageBase: You are not an operator to this land");
+        world.withdrawTokens(bob_landId, 50);
+
+        vm.prank(claire);
+        world.withdrawTokens(bob_landId, 50);
+
+        assertEq(world.tokenBalanceOf(bob_landId), 50);
+        assertEq(softToken.balanceOf(bob), 50);
+
+        // assertEq(softToken.balanceOf(claire), 0);
+
+        // vm.prank(bob);
+        // world.withdrawTokens(bob_landId, 100);
+        
+        // assertEq(world.tokenBalanceOf(bob_landId), 0);
+        // assertEq(softToken.balanceOf(bob), 150);
+    }
+
+    function test_approveLandUsage() public {
+        vm.expectRevert("LandConfig: You are not the owner of this land");
+        world.approveLandOperator(bob_landId, claire, true);
+
+        vm.startPrank(bob);
+        world.mintPlaceItem(bob_landId, 0, 0, MI.AVOCADO);
+        world.approveLandOperator(bob_landId, claire, true); 
+        vm.stopPrank();
+
+        vm.startPrank(claire);
+        world.mintPlaceItem(bob_landId, 0, 1, MI.AVOCADO);
+
+        vm.expectRevert("LandConfig: You are not the owner of this land");
+        world.approveLandOperator(bob_landId, danny, true);
+        vm.stopPrank();
+    }
+
+}

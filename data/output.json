@@ -1,0 +1,255 @@
+{
+  "computeQuery": {
+    "k": 13,
+    "vkey": [
+      "0x903153f24b9eb5cc12a5d728a77c10193c71f16444b0b7f737cde7b2c524952c",
+      "0xc04b25057d0bddf35d4542077516abb76445b8e745a457e3ccc1bf9aac2ba406",
+      "0xd89458fd18af542bc1e5d16d20f5d714474391954bd628b0f6d4398f2f5cba53",
+      "0xc408827490c0f2887cbebb8f4c751f61be0dca256ac0ea7e90decb4cd060654f",
+      "0x0000000000000000000000000000000000000000000000000000000000000080",
+      "0x0000000000000000000000000000000000000000000000000000000000000080",
+      "0x0000000000000000000000000000000000000000000000000000000000000080",
+      "0xaf8724a6209256a08b087834d7c2f69d5e8773757d0d95b49e096bd8e9259263",
+      "0xc273fb16a3985e988c9e5d37170c402241398605e404e7c7b7621d1e5d257840",
+      "0x22e4c62aacfc240ed0553bfad00122ba8c7627c870c739f3f818584e066a8b1f",
+      "0x841485e0a9f109688bdc4f5ff851d9e2e44833ae573456742c1237322e938542",
+      "0x79a62f1cc2f1440cc9fdcd534b612a49da4b6139bbed8cf53a26f4568ac3f567",
+      "0x4117f8efa08763f043fdff3f0c5e5e27a8d85d0a039aa013452b085b11025d5d",
+      "0xcfb5d6b410fd1124c3ac9439850c47d596c94e54b265102bac5d70a627ede70e"
+    ],
+    "computeProof": "0x000000000000000000000000000000000000000000000000000000000000000b00000000000000000000000000000000000000000000000000000000009bad4900000000000000000000000000000000000000000000000000000000009bb131000000000000000000000000000000000000000000000000000000000000001f7bfaf0c5e591b137297c2cdc6d433ebfe06acb565c4eddd14d601b1580e7572897f25fa37f39fa74cdf98d2f8f099b2eec849a9090c75c380ce32b6381d809694f46a5e078b8974463f69d4df0435454755757e3f89c39d5151a55c1d241d1052e9102ebd1de89be8986a90ea8f99dd5ccddb447a88c31df2dc76a33f75fc369ec11f3ed52fb7fad4759f865681cb2f62a3ced8602dadf521736c7023713b04464784c794ccaef62dc5a2f475abe4ab44d74f1b59339c6ffe4eb9ce2d26549114fa607bd24186b6494c713ce3f0065421b80c50b516084e6e89eab6c6d9d49167c7c5e810a00b3516e476618cf227c9739d48424e559385252ef6d93ba34c927f62dcf36396258d1bb27c8b829066296781dce633e01687b9a6c1bb33fb2340ca326a72993c9b67b14da1f4c2f659d4772f93473c37ca8b18ae70d3b7c25c454a3715fac09a61565b8fb883da8260c08d13c66c9ce543defdebe0807d23d7715496861798874681faa709ceba568d389e16c7472425f2238eacca3ff18c4f0199a771149a62796b3ebd1d20bb922745e7c93d729f91b4ed4a8f3ab6f935f721bd02095e173cd36dd27d5a5559b9845cf9476b74de16a3489bf69f30fae14a25d4db3a550a29da78ef35856c0961ff00324e9234c48c0dbe278b158d81af8cb066a79ea9b6f8fe52ac047a3f641682698516b7dbea6704e82ed8f5b40a8a7f7445d0b717578fed675c8da7c266ce20a4c7a10a6e5c55a6bf6ac5349c6d80e410ce561a9c9b7b326ad0d152c6bb68936b6a4a027506759cf44760ef4401e8900013f28fa0cf5fb8e91842c1637c81a5c15dfd9308dd41b1ea0fb1ed8c6e8a3330e736bd61976d7801b0d30e964909c87f38b76396cf234c5f4d4896bd4cbb40d193f719edc754ee0f87548e2bd3d77e63155f0b83efdc9fc71b479f694d7afbc2e00ac958e1b4e9d3122a0e49e9fd53a15dd064812d30996dc997176e46f2f0a27a631c6ecdb5866d09451f2ead9dc27bc42e01dd96de7f548f86917835133042cd489b4041134ea6f5645f23802337c2550d00f4d7427ae6113b13a0ca235e317dcea8be8708531e366ca92c2081a6d459f8c46010407897816a4951f74c9a41f66e66fab4fbf3c58b679c8260cb6784b7f8c6d7e6dca55d6a4450facbf9ecb0c5d12b39b184d40ade19ddb2c9c2dfd360c3145b91b866106870f5db2e4888e11a5257631a307aa0d4dd40467b109bd1b669668c1b9debb52ede4d92ef8bd9c0a888d46c3aaa4df951767c91a61d35ef7311407da35733d0e5ae0d90958756a29dab9414b2605fbcffd0d4efd324f58ef5b3402142367c916721f283525c68506147f7bc71a831663335d4de7f82a2bd94950743945bc995ce5d5981f71df782f29966ed8b2124a15d1bc30d76445756c8aec65951632e1ce5c7fb10b8593bc23ab113dbe4857719fb5ae2294fd661b706b0355f6176458316747d97bf0b2ae1c9245529d232da0a15b9f7ae3b597022cd68cd1a70ad8299c27bbeea3b5306d0e8bcbd781fb211cd496fe7b259ef04eb1abb8b1469699a115736bb21300a0b005045dd4de8c0fae16c03e7626c57ac5796776cfdd703a41a0d84247ab05717b1e000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000439da7c34884a0d7991be24718726bf1a291e25d94d5b68861525d726307ce2018f28b29b70993b55ee1378d582a03dabfddf281c4e8a6b49b652139ffd08806c0e84d5b2600c9e8043fd3b9ebfa1ba11fea9a2dfd20c68c4ae396988fc34919e0ee4e499a55027f296a6c4fb879ff46607c4e5a233fc51aef47f1109f62b12366ec1b4f143a5a3b1e22de76880e68b1b46e950696271bf73a1bf78d0bc8a82de15d65f368c7ae86bacff399d31b9d67aedcced0f5f47f4946bb2c4159fd0513407f1e99f594d8275dbde42cb2d3fc0c17ed977a3b8ad68c86d627dc1308ce13401872c313ef7842e6ea4cfbe4ce525628000b8fa4dd382a10e5b112df2a6e1101b9d1ff2de826cbe537201aba8585fcfc9cd7586a52c836b287d2b356582015cf3c2b66733410e225171792ae89fcbb666c64c11c03a2da974c108d0a65b9131fb2d74a255a3333e089bb0d637ad93215fce060f4f546e30635a8e43ab1462a97dee8988360de972203dbf3e572953f45347fd0b7235ee76d0101c9ebebe304d5a064ec58c4efc45fe3b318994b84cfe31947370dd772d3a28f95c1a8efa510ce0cb7ce6050ee4dcac03749a66cc3a2df336ef13d5487337c0543516489ee1bac4f2cddff3b29c558b9018ab04fe111b32567e673daac55c53e155da3caa6143bc252978d9b2bbb53392788675c0e87ebb554d327e4fd8070a5dcaaca253e07a7993f37cec65021888b6ab779c3faebfbaf4f61fdc6784ed83dca7d05c44d0ecb71aed6fe75c2a9768e96a0105bed2195c26fdd9201c589aaf939d4dcdd2b0c2945bc42f9390d2dbbd679695bcef0ba0fc8d6f14a19545c6ea2ff1972c96d1470136a95b7719c5b6c48d21a2a977e92885f2c0dca575498ef4f5f054ab6fb2cdc852938fa8c6b78f4761b24039dfa5fdc734812e92d6b843f5baafba188c61dce2ae935f172a14ea4154a4b55663b331ba8da04924f25f381c86bda1e6a70133bf3b12b91b7a926f3f3695d024f64b4600b0bbedbb144af86ef57e3d6f93f2bf985d79b0938d09869cc25f8f45b0186876d8fddbe16afe1056319c01a371e2427883b691cf1b4b55993aff97b210512d26d5d22c529cf2d94078673e3ef0a531ca4d22bcd2247f7dd5881493202b40702019a1a3e182c90b7789609863d8b1f",
+    "resultLen": 4
+  },
+  "computeResults": [
+    "0x000000000000000000000000000000000000000000000000000000000000000b",
+    "0x00000000000000000000000000000000000000000000000000000000009bad49",
+    "0x00000000000000000000000000000000000000000000000000000000009bb131",
+    "0x000000000000000000000000000000000000000000000000000000000000001f"
+  ],
+  "dataQuery": [
+    {
+      "subqueryData": {
+        "blockNumber": 10202441,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202473,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202505,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202537,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202569,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202601,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202633,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202665,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202697,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202729,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202761,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202793,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202825,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202857,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202889,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202921,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202953,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10202985,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203017,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203049,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203081,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203113,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203145,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203177,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203209,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203241,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203273,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203305,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203337,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203369,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203401,
+        "fieldIdx": 15
+      },
+      "type": 1
+    },
+    {
+      "subqueryData": {
+        "blockNumber": 10203433,
+        "fieldIdx": 15
+      },
+      "type": 1
+    }
+  ]
+}

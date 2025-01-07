@@ -1,0 +1,42 @@
+{
+  "name": "CafeCosmosContracts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mud build",
+    "clean": "forge clean && rimraf src/codegen",
+    "deploy:local": "pnpm run build && mud deploy",
+    "deploy:testnet": "pnpm run build && mud deploy --profile=lattice-testnet",
+    "dev": "pnpm mud dev-contracts",
+    "lint": "pnpm run prettier && pnpm run solhint",
+    "prettier": "prettier --write 'src/**/*.sol'",
+    "solhint": "solhint --config ./.solhint.json 'src/**/*.sol' --fix",
+    "test": "tsc --noEmit && mud test",
+    "circuit:compile": "npx axiom compile axiom/circuit.ts --function feeAverage --inputs data/inputs/defaultInput.json --provider $PROVIDER_URI_GOERLI",
+    "circuit:run": "npx axiom run axiom/circuit.ts --function feeAverage --inputs data/inputs/input.json --provider $PROVIDER_URI_GOERLI"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@axiom-crypto/client": "0.1.1",
+    "@types/node": "^18.19.67",
+    "ds-test": "github:dapphub/ds-test#e282159d5170298eb2455a6c05280ab5a73a4ef0",
+    "forge-std": "github:foundry-rs/forge-std#74cfb77e308dd188d2f58864aaf44963ae6b88b1",
+    "prettier": "^3.4.2",
+    "prettier-plugin-solidity": "^1.4.1",
+    "solhint": "^3.6.2",
+    "solhint-config-mud": "^2.2.14",
+    "solhint-plugin-mud": "^2.2.14"
+  },
+  "dependencies": {
+    "@axiom-crypto/client": "0.1.1",
+    "@latticexyz/cli": "file:../../mud/packages/cli",
+    "@latticexyz/schema-type": "file:../../mud/packages/schema-type",
+    "@latticexyz/store": "file:../../mud/packages/store",
+    "@latticexyz/world": "file:../../mud/packages/world",
+    "@latticexyz/world-modules": "file:../../mud/packages/world-modules",
+    "@openzeppelin/contracts": "^4.9.6",
+    "@openzeppelin/contracts-upgradeable": "^4.9.6"
+  }
+}

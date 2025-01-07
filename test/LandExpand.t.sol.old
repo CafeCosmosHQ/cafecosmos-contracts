@@ -1,0 +1,212 @@
+// SPDX-License-Identifier: Unlicensed 
+import {Test} from "forge-std/Test.sol";
+import {Items} from "../src/tokens/Items.sol";
+import "forge-std/console.sol";
+import {CafeCosmosTest} from "./util/CafeCosmosTest.sol";
+
+
+
+
+contract LandExpandTest is CafeCosmosTest 
+{
+    address internal alice = 0xe919Cc7bEA733bf4Cf3c60E85305b4eFf0059326;
+    address internal softDestination = 0x12890D2cCe102216644c59DaE5Baed380D848301;
+    string logPath = "test/LandExpandTestLog.txt";
+
+    address internal amalia = 0xe919Cc7bEA733bf4Cf3c60E85305b4eFf0059326;
+    
+    function setUp() public {
+        if(vm.isFile(logPath)){
+            vm.removeFile(logPath); // starting new log
+        }
+        emit log_address(address(this));
+        perlinItemConfig.setItem(1, 14, 114);
+        perlinItemConfig.setItem(2, 14, 214);
+        perlinItemConfig.setItem(2, 15, 215);
+        perlinItemConfig.setItem(2, 16, 216);
+        perlinItemConfig.setItem(2, 17, 217);
+        perlinItemConfig.setItem(2, 18, 218);
+        perlinItemConfig.setItem(2, 19, 219);
+        perlinItemConfig.setItem(2, 1, 21);
+        perlinItemConfig.setItem(2, 2, 22);
+        perlinItemConfig.setItem(2, 3, 23);
+        perlinItemConfig.setItem(2, 4, 24);
+        perlinItemConfig.setItem(2, 5, 25);
+        perlinItemConfig.setItem(2, 6, 26);
+        perlinItemConfig.setItem(2, 7, 27);
+        perlinItemConfig.setItem(2, 8, 28);
+        perlinItemConfig.setItem(2, 9, 29);
+        perlinItemConfig.setItem(2, 10, 210);
+        perlinItemConfig.setItem(2, 11, 211);
+        perlinItemConfig.setItem(2, 12, 212);
+        perlinItemConfig.setItem(2, 13, 213);
+
+        perlinItemConfig.setItem(1, 14, 114);
+        perlinItemConfig.setItem(1, 15, 115);
+        perlinItemConfig.setItem(1, 16, 116);
+        perlinItemConfig.setItem(1, 17, 117);
+        perlinItemConfig.setItem(1, 18, 118);
+        perlinItemConfig.setItem(1, 19, 119);
+        perlinItemConfig.setItem(1, 20, 120);
+        perlinItemConfig.setItem(1, 1, 11);
+        perlinItemConfig.setItem(1, 2, 12);
+        perlinItemConfig.setItem(1, 3, 13);
+        perlinItemConfig.setItem(1, 4, 14);
+        perlinItemConfig.setItem(1, 5, 15);
+        perlinItemConfig.setItem(1, 6, 16);
+        perlinItemConfig.setItem(1, 7, 17);
+        perlinItemConfig.setItem(1, 8, 18);
+        perlinItemConfig.setItem(1, 9, 19);
+        perlinItemConfig.setItem(1, 10, 110);
+        perlinItemConfig.setItem(1, 11, 111);
+        perlinItemConfig.setItem(1, 12, 112);
+        perlinItemConfig.setItem(1, 13, 113);
+        
+        vm.prank(alice);
+        softToken.approve(worldAddress, 10000000e18);
+        
+
+        emit log_named_uint("seed mask", uint256(SEED_MASK));
+        assertEq(softToken.allowance(alice, worldAddress), 10000000e18);
+    }
+
+    
+    function test_Seeds() public {
+        uint blockNumber = 18446744073709551615;
+        uint timestamp = 1701743645;
+        
+            uint seed =  uint32(uint160(alice) & SEED_MASK) +
+                (uint32(timestamp & SEED_MASK) >> 2);
+        
+        emit log_uint(seed);
+        emit log_uint(blockNumber);
+        
+       uint x = 4;
+       uint y = 4;
+       uint blockSeedId =  (uint32(timestamp & (uint256(seed) >> 2)));
+       uint blockGroupId =  (uint32(timestamp & (uint256(seed) >> 2)));
+        
+        emit log_uint(blockSeedId);
+        emit log_uint(blockGroupId);
+    }
+
+    /**
+    * forge-config: default.fuzz.runs = 10024
+    * forge-config: default.fuzz.max-test-rejects = 4
+    */
+    function test_FuzzSeeds(address user, uint blockNumber, uint timestamp) public {
+        
+        unchecked
+        {
+            uint seed =  uint32(uint160(user) & SEED_MASK) + (uint32(timestamp & SEED_MASK) >> 2);
+            uint blockSeedId =  (uint32(timestamp & (uint256(seed) >> 2)));
+            uint blockGroupId =  (uint32(timestamp & (uint256(seed) >> 2)));   
+        }
+    }
+
+
+    function test_shouldExpand() public {
+        vm.roll(199999999);
+        
+        vm.prank(alice);
+        uint256 landId_alice = world.createLand(5, 5);
+        console.log("limitX", world.getLandInfo(landId_alice).limitX);
+        console.log("landId_alice", landId_alice);
+        assertEq(world.getLandInfo(landId_alice).limitX, 5);
+        assertEq(world.getLandInfo(landId_alice).limitY, 5);
+       
+        //perlin not configured we will get 0 slots
+        uint256[] memory slots = world.getLandSlot(landId_alice, 1, 1);
+        //assertEq(0, slots.length);
+
+        vm.startPrank(alice);
+        world.depositTokens(landId_alice, 10000);
+        world.expandLand(landId_alice, 5, 5);
+        
+        assertEq(world.getLandInfo(landId_alice).limitX, 10);
+        assertEq(world.getLandInfo(landId_alice).limitY, 10);
+
+        world.expandLand(landId_alice, 1, 1);
+        assertEq(world.getLandInfo(landId_alice).limitX, 11);
+        assertEq(world.getLandInfo(landId_alice).limitY, 11);
+    }
+
+
+  function test_FuzzModuleGroupId(uint16 x, uint16 y, uint32 seed)  public {
+        
+        unchecked {
+            uint groupId = ((seed + x + y) % 2 ) + 1;
+            vm.writeLine(logPath, string.concat("groupId generated:", vm.toString(groupId)));        
+        }
+        
+    }
+
+    /**
+   * forge-config: default.fuzz.runs = 256
+   * forge-config: default.fuzz.max-test-rejects = 2
+   */
+     function test_FuzzExpandLand(uint64 blockNumber) public {
+        vm.roll(blockNumber);
+        vm.warp(blockNumber);
+        vm.prank(alice);
+        uint rowcolumns = 5;
+        uint256 landId_alice = world.createLand(rowcolumns, rowcolumns);
+        vm.writeLine(logPath, string.concat("seed:", vm.toString(world.getLandInfo(landId_alice).seed)));  
+      
+        for(uint x = 0; x < rowcolumns; x++) {
+            for(uint y = 0; y < rowcolumns; y++) {
+                uint256[] memory slots = world.getLandSlot(landId_alice, x, y);
+
+                if(slots.length > 0) {
+                    vm.writeLine(logPath, string.concat("slot generated:", vm.toString(slots[0])));    
+                }else{
+                    vm.writeLine(logPath, string.concat("slot:", "0"));    
+                }
+                
+            }
+        }
+         
+    }
+
+
+    function test_initialLandLimit() public {
+        world.setMinStartingLimits(5, 5);
+        assertEq(world.getMinStartingLimits()[0], 5);
+        assertEq(world.getMinStartingLimits()[1], 5);
+
+        vm.startPrank(alice);
+        vm.expectRevert("LandConfig: minimum starting limits not met");
+        world.createLand(4, 4);
+        
+        vm.expectRevert("LandConfig: minimum starting limits not met");
+        world.createLand(5, 5);
+        
+        vm.expectRevert("LandConfig: minimum starting limits not met");
+        world.createLand(5, 6);
+
+        vm.expectRevert("LandConfig: minimum starting limits not met");
+        world.createLand(6, 5);
+
+        world.createLand(6, 6);
+    }
+
+/*
+    function test_shouldExpand_Failing() public {
+        vm.prank(amalia);
+        world.expandLand(5, 5);
+        assertEq(world.getLandInfo(alice).limitX, 5);
+        assertEq(world.getLandInfo(alice).limitY, 5);
+       
+        //perlin not configured we will get 0 slots
+        uint256[] memory slots = world.getLandSlot(alice, 1, 1);
+        assertEq(0, slots.length);
+
+
+        vm.prank(alice);
+        world.expandLand(5, 5);
+        assertEq(world.getLandInfo(alice).limitX, 10);
+        assertEq(world.getLandInfo(alice).limitY, 10);
+
+    }
+*/
+}

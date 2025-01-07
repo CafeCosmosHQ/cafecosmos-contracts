@@ -1,0 +1,92 @@
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+import "forge-std/console.sol";
+
+// SPDX-License-Identifier: Unlicensed 
+import {Items} from "../src/tokens/Items.sol";
+import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
+import {TransformationDTO} from "../src/libraries/Types.sol";
+import {LandTablesAndChairs} from "../src/systems/LandTablesAndChairsContract.sol";
+import {LandTransform} from "../src/systems/LandTransform.sol";
+import {PerlinItemConfig} from "../src/PerlinItemConfig.sol";
+import {SoftToken} from "../src/tokens/SoftToken.sol";
+import {LandNFTs} from "../src/tokens/LandNFTs.sol";
+import {CafeCosmosTest} from "./util/CafeCosmosTest.sol";
+
+contract ChunkGenerationTest is CafeCosmosTest 
+{
+ 
+
+    uint256 landId;
+
+    function setUp() public {
+
+        softToken.approve(worldAddress, 9e25);
+        landId = world.createLand(10, 10);
+    }
+
+    function testYBoundArray() public {
+        assertEq(world.getYBound(landId).length, 10);
+
+        world.generateChunk(landId);
+
+        for(uint256 x = 0; x<7; x++){
+            assertEq(world.getItemAt(landId, x, 0), 1);
+        }
+
+        vm.expectRevert("LandStorageBase: Out of bounds");
+        world.getItemAt(landId, 7, 0);
+
+        world.generateChunk(landId);
+
+        for(uint256 x = 0; x<10; x++){
+            assertEq(world.getItemAt(landId, x, 0), 1);
+        }
+
+        for(uint256 x = 0; x<4; x++){
+            assertEq(world.getItemAt(landId, x, 1), 1);
+        }
+
+        vm.expectRevert("LandStorageBase: Out of bounds");
+        world.getItemAt(landId, 10, 0);
+        
+        vm.expectRevert("LandStorageBase: Out of bounds");
+        world.getItemAt(landId, 4, 1);
+
+        assertEq(world.getYBound(landId)[0], 10);
+        assertEq(world.getYBound(landId)[1], 4);
+
+        world.expandLand(landId, 1, 0);
+
+        assertEq(world.getYBound(landId)[0], 10);
+        assertEq(world.getYBound(landId)[1], 4);
+
+        world.generateChunk(landId);
+        
+        assertEq(world.getItemAt(landId, 10, 0), 1);
+
+        assertEq(world.getYBound(landId)[0], 11);
+        assertEq(world.getYBound(landId)[1], 10);
+
+        for(uint256 x = 0; x < world.getYBound(landId).length + 3; x++){
+            world.generateChunk(landId);
+        }
+
+        world.expandLand(landId, 1,2);
+
+        world.generateChunk(landId);        
+
+        assertEq(world.getYBound(landId)[0], 12);
+        assertEq(world.getYBound(landId)[8], 11);
+        assertEq(world.getYBound(landId)[11], 0);
+
+        for(uint256 y = 0; y<8; y++){
+            for(uint256 x = 0; x<11; x++){   
+                assertEq(world.getItemAt(landId, x, y), 1);
+                // console.log(x, y, world.getItemAt(landId, x, y));
+            }
+        }
+    }
+
+}

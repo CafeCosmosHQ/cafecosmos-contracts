@@ -1,0 +1,332 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+import "forge-std/console.sol";
+
+
+import {Items} from "../contracts/tokens/Items.sol";
+import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
+import {MockLand} from "../contracts/tests/MockLand.sol";
+import {Transformations, ITransformations} from "../contracts/Transformations.sol";
+import {LandTablesAndChairs} from "../contracts/LandTablesAndChairs.sol";
+import {LandTransform} from "../contracts/LandTransform.sol";
+import {PerlinItemConfig} from "../contracts/PerlinItemConfig.sol";
+import {SoftToken} from "../contracts/tokens/SoftToken.sol";
+import {LandNFTs} from "../contracts/tokens/LandNFTs.sol";
+import {MI} from "./MockItems.sol";
+import {MockERC1155Receiver} from "./util/MockERC1155Receiver.sol";
+
+
+contract MockWaterControllerTest is Test, MockERC1155Receiver {
+
+    Transformations public transformations;
+    SoftToken public softToken;
+    Items public items;
+    MockLand public land;
+    LandTablesAndChairs public landTablesAndChairs;
+    LandTransform public landTransform;
+    PerlinItemConfig public perlinItemConfig;
+    LandNFTs public landNFTs;
+
+    uint256 SOFTCOST = 300;
+    uint256 PREMIUMCOST = 25;
+    uint256 LAND_X = 3;
+    uint256 LAND_Y = 3;
+    uint256 SCALE = 1;
+    
+    uint256 numSamples = 31;
+    uint256 blockInterval = 1000;
+    uint256 minYieldTime = 387;
+    uint256 maxYieldTime = 707412;
+    uint256 endBlockSlippage = 100;
+    int256 minDelta = -54067095249;
+    int256 maxDelta = 3870911308;
+
+    uint256 landId;
+
+    address bob = address(0xB);
+    uint256 landId_bob;
+
+
+    function setUp() public {
+        vm.roll(block.number + 1000);
+
+        softToken = new SoftToken("SOFT", "SOFT");
+        landNFTs = new LandNFTs("LAND", "LAND");
+        items = new Items("http://ipfs.io/");
+        land = new MockLand();
+        transformations = new Transformations();
+        landTablesAndChairs = new LandTablesAndChairs();
+        landTransform = new LandTransform();
+        perlinItemConfig = new PerlinItemConfig();
+
+        land.setSoftToken(address(softToken));
+        land.setLandNFTs(address(landNFTs));
+        land.setItems(address(items));
+        land.setSoftCost(SOFTCOST);
+        land.setLandTablesAndChairsAddress(address(landTablesAndChairs));
+        land.setLandTransformAddress(address(landTransform));
+        land.setItemConfigAddress(address(perlinItemConfig));
+        land.setTransformationAddress(address(transformations));
+        transformations.setLand(address(land));
+        land.setWaterControllerParameters(numSamples, blockInterval, minYieldTime, maxYieldTime, endBlockSlippage, minDelta, maxDelta);
+        land.setSoftDestination(address(0x1337));
+        landNFTs.setLand(address(land));
+        land.setChunkSize(7);
+
+        ITransformations.Transformation memory newTransformation = ITransformations.Transformation(
+            MI.WELL, // base 
+            MI.BUCKET, // input 
+            MI.WELL_COLLECTING_BUCKET_WATER, // next 
+            0, // inputNext
+            0, // yield 
+            0, // yieldQuantity 
+            0, // unlockTime 
+            1000, // timeout 
+            0,   // timeoutYield 
+            0, // timeoutYieldQuantity 
+            0, // timeoutNext 
+            false, // isRecipe 
+            true, // isWaterCollection 
+            true // exists 
+        );
+        
+        //@dev: the collection CANNOT have a timeout
+        ITransformations.Transformation memory newTransformation2 = ITransformations.Transformation(
+            MI.WELL_COLLECTING_BUCKET_WATER, // base 
+            MI.UNLOCK_, // input 
+            MI.WELL, // next 
+            0, // inputNext
+            MI.BUCKET_WATER, // yield 
+            1, // yieldQuantity 
+            0, // unlockTime 
+            0, // timeout 
+            0,   // timeoutYield 
+            0, // timeoutYieldQuantity 
+            0, // timeoutNext 
+            false, // isRecipe 
+            false, // isWaterCollection 
+            true // exists 
+        );
+
+        transformations.setTransformation(newTransformation);
+        transformations.setTransformation(newTransformation2);
+        
+        uint256 soft_cost = land.calculateLandCost(LAND_X, LAND_Y);
+        softToken.approve(address(land), soft_cost);
+        landId = land.createLand(LAND_X, LAND_Y);
+        items.setApprovalForAll(address(land), true);
+        uint256[] memory itemIds = new uint256[](2);
+        itemIds[0] = MI.WELL;
+        itemIds[1] = MI.BUCKET;
+        uint256[] memory quantities = new uint256[](2);
+        quantities[0] = 1;
+        quantities[1] = 1;
+        items.mintBatch(address(this), itemIds, quantities, "0x003");
+        land.depositItems(landId, itemIds, quantities);
+        
+        //initialize bob
+        softToken.transfer(bob, soft_cost);
+        items.mintBatch(bob, itemIds, quantities, "0x003");
+        vm.startPrank(bob);
+        
+        softToken.approve(address(land), soft_cost);
+        landId_bob = land.createLand(LAND_X, LAND_Y);
+        items.setApprovalForAll(address(land), true);
+        land.depositItems(landId_bob, itemIds, quantities);
+        assertEq(land.itemBalanceOf(landId_bob, MI.WELL), 1);
+
+        vm.stopPrank();
+
+    }
+
+    function testCalculateWaterYieldTime() public {
+        land.setWaterControllerParameters(numSamples, blockInterval, minYieldTime, maxYieldTime, endBlockSlippage, minDelta, maxDelta);
+        assertEq(land.getDeltas()[0], minDelta);
+        assertEq(land.getDeltas()[1], maxDelta);
+        assertEq(land.calculateWaterYieldTime(0), 47625);
+        assertEq(land.calculateWaterYieldTime(3810911308), 1120);
+        assertEq(land.calculateWaterYieldTime(-3810911308), 94130);
+        assertEq(land.calculateWaterYieldTime(maxDelta), minYieldTime);
+        assertEq(land.calculateWaterYieldTime(minDelta), maxYieldTime);
+        assertEq(land.calculateWaterYieldTime(maxDelta+1000), minYieldTime);
+        assertEq(land.calculateWaterYieldTime(minDelta-1000), maxYieldTime);
+    }
+
+    function testUpdateWaterYield() public {
+        
+        assertEq(land.getWaterYieldTime(),120);
+
+        land.mockAxiomV2Callback(50, land.getLastUpdate(), block.number, land.getnumSamples());
+
+        assertEq(land.getWaterYieldTime(),47625);
+        assertEq(land.getLastUpdate(),block.number);
+
+        land.placeItem(landId, 0, 0, MI.WELL);
+        land.placeItem(landId, 0, 0, MI.BUCKET);
+
+        vm.warp(block.timestamp + 1 + 1);
+
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL_COLLECTING_BUCKET_WATER);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[0], 47625);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[1], 47625 + 1000);
+
+        vm.expectRevert();
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+
+        vm.warp(block.timestamp + 47625 + 1);
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+        
+        assertEq(land.getWaterYieldTime(),47625);
+        assertEq(land.itemBalanceOf(landId, MI.BUCKET_WATER), 1);
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL);
+    }
+    
+    function testWaterYieldTimeout() public {
+        transformations.setTransformation(ITransformations.Transformation(
+            MI.WELL_COLLECTING_BUCKET_WATER, // base 
+            MI.UNLOCK_, // input 
+            MI.WELL, // next 
+            0, // inputNext
+            MI.BUCKET_WATER, // yield 
+            1, // yieldQuantity 
+            0, // unlockTime 
+            0, // timeoutTime
+            MI.BUCKET,   // timeoutYield 
+            1, // timeoutYieldQuantity 
+            MI.WELL, // timeoutNext 
+            false, // isRecipe 
+            false, // isWaterCollection 
+            true // exists 
+        ));
+        
+        assertEq(land.getWaterYieldTime(),120);
+
+        land.mockAxiomV2Callback(50, land.getLastUpdate(), block.number, land.getnumSamples());
+
+        assertEq(land.getWaterYieldTime(),47625);
+
+        land.placeItem(landId, 0, 0, MI.WELL);
+        land.placeItem(landId, 0, 0, MI.BUCKET);
+
+        vm.warp(block.timestamp + 1 + 1);
+
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL_COLLECTING_BUCKET_WATER);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[0], 47625);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[1], 47625 + 1000);
+
+        vm.expectRevert();
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+
+        vm.warp(block.timestamp + 47625 + 1001);
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+        
+        assertEq(land.getWaterYieldTime(),47625);
+        assertEq(land.itemBalanceOf(landId, MI.BUCKET), 1);
+        assertEq(land.itemBalanceOf(landId, MI.BUCKET_WATER), 0);
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL);
+    }
+
+    function testWaterYieldNoTimeout() public {
+        transformations.setTransformation(ITransformations.Transformation(
+            MI.WELL, // base 
+            MI.BUCKET, // input 
+            MI.WELL_COLLECTING_BUCKET_WATER, // next 
+            0, // inputNext
+            0, // yield 
+            0, // yieldQuantity 
+            0, // unlockTime 
+            0, // timeout 
+            0,   // timeoutYield 
+            0, // timeoutYieldQuantity 
+            0, // timeoutNext 
+            false, // isRecipe 
+            true, // isWaterCollection 
+            true // exists 
+        ));
+        
+        assertEq(land.getWaterYieldTime(),120);
+
+        land.mockAxiomV2Callback(50, land.getLastUpdate(), block.number, land.getnumSamples());
+
+        assertEq(land.getWaterYieldTime(),47625);
+
+        land.placeItem(landId, 0, 0, MI.WELL);
+        land.placeItem(landId, 0, 0, MI.BUCKET);
+
+        vm.warp(block.timestamp + 1 + 1);
+
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL_COLLECTING_BUCKET_WATER);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[0], 47625);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[1], 0);
+
+        vm.expectRevert();
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+
+        vm.warp(block.timestamp + 47625 + 1001);
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+        
+        assertEq(land.getWaterYieldTime(),47625);
+        assertEq(land.itemBalanceOf(landId, MI.BUCKET_WATER), 1);
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL);
+    }
+
+    function testChangeDelta() public {
+        land.mockAxiomV2Callback(50, land.getLastUpdate(), block.number, land.getnumSamples());
+        assertEq(land.getWaterYieldTime(),47625);
+        assertEq(land.getLastTWAP(), 50);
+
+        land.placeItem(landId, 0, 0, MI.WELL);
+        land.placeItem(landId, 0, 0, MI.BUCKET);
+
+        vm.warp(block.timestamp + 1 + 1);
+
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL_COLLECTING_BUCKET_WATER);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[0], 47625);
+        assertEq(land.getUnlockTimes(landId, 0, 0)[1], 47625 + 1000);
+        
+        vm.expectRevert();
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+        land.mockAxiomV2Callback(54067095249, land.getLastUpdate(), block.number, land.getnumSamples());
+        assertEq(land.getWaterYieldTime(), 387);
+    
+        vm.expectRevert();
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+
+        vm.startPrank(bob);
+        land.placeItem(landId_bob, 0, 0, MI.WELL);
+        land.placeItem(landId_bob, 0, 0, MI.BUCKET);
+        
+        assertEq(land.getItemAt(landId_bob, 0, 0), MI.WELL_COLLECTING_BUCKET_WATER);
+        assertEq(land.getUnlockTimes(landId_bob, 0, 0)[0], 387);
+        assertEq(land.getUnlockTimes(landId_bob, 0, 0)[1], 387 + 1000);
+
+        vm.warp(block.timestamp + 387 + 1);
+        land.placeItem(landId_bob, 0, 0, MI.UNLOCK_);
+
+        assertEq(land.getWaterYieldTime(),387);
+        assertEq(land.itemBalanceOf(landId_bob, MI.BUCKET_WATER), 1);
+        assertEq(land.getItemAt(landId_bob, 0, 0), MI.WELL);
+
+        vm.stopPrank();
+        vm.expectRevert();
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+
+        vm.warp(block.timestamp + 47625);
+        land.placeItem(landId, 0, 0, MI.UNLOCK_);
+
+        assertEq(land.getWaterYieldTime(),387);
+        assertEq(land.itemBalanceOf(landId, MI.BUCKET_WATER), 1);
+        assertEq(land.getItemAt(landId, 0, 0), MI.WELL);
+    }
+
+
+    //TODO: test max samples don't match
+    //TODO: test last update doesn't match
+    //TODO: test end block doesn't match (too early)
+    //TODO: test block interval has not passed
+    //TODO: test with 0 timeout
+
+}
+

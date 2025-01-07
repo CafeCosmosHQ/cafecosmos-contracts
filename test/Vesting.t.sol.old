@@ -1,0 +1,101 @@
+// SPDX-License-Identifier: UNLICENSED
+
+pragma solidity ^0.8.13;
+
+import {Test, console2} from "forge-std/Test.sol";
+import {Vesting} from "../src/Vesting.sol";
+import {SoftToken} from "../src/tokens/SoftToken.sol";
+
+//Fuzz tests run individual tests to see the logs as per forge test -vvvvv --match-test testFuzz_Withdraw10000
+
+contract VestingTest is CafeCosmosTest {
+    string logPath = "test/VestingTestLog.txt";
+    Vesting public vesting;
+    SoftToken public softToken;
+    address internal beneficiary = 0x12890D2cce102216644c59daE5baed380d84830c;
+    uint64 startTimestamp = uint64(block.timestamp);
+
+    function setUp() public {
+        softToken = new SoftToken("Test", "TEST");
+        // if(vm.exists(logPath)){
+        //     vm.removeFile(logPath); // starting new log
+        // }
+        vesting = new Vesting(address(beneficiary), address(softToken));   
+    }
+
+    function testFuzz_Withdraw10000(uint8 numberOfBlocks) public {
+        vm.writeLine(logPath, string.concat("testFuzz_Withdraw10000:", vm.toString(numberOfBlocks)));
+        softToken.transfer(address(vesting), 10000e18);
+        runReleaseTest(numberOfBlocks);
+      
+    }
+
+    function testFuzz_Withdraw100(uint8 numberOfBlocks) public {
+        vm.writeLine(logPath, string.concat("testFuzz_Withdraw100:", vm.toString(numberOfBlocks)));
+        softToken.transfer(address(vesting), 100e18);
+        runReleaseTest(numberOfBlocks);
+    }
+
+    function testFuzz_Withdraw10(uint8 numberOfBlocks) public {
+        vm.writeLine(logPath, string.concat("testFuzz_Withdraw10:", vm.toString(numberOfBlocks)));
+        softToken.transfer(address(vesting), 10e18);
+        runReleaseTest(numberOfBlocks);
+    }
+
+    function runReleaseTest(uint8 numberOfBlocks) private {
+        if (numberOfBlocks > 100000) {
+           return;
+        }
+       
+        uint balanceVesting1 = softToken.balanceOf(address(vesting));
+        uint blocksPassed = (block.number + numberOfBlocks) - vesting.getLastReleaseBlock();
+        uint256 amount = (balanceVesting1 * vesting.getReleasePerBlock() * blocksPassed) / 1e18; 
+        vm.writeLine(logPath, string.concat("blocks passed:", vm.toString(blocksPassed)));
+        vm.writeLine(logPath, string.concat("release per block:", vm.toString(vesting.getReleasePerBlock())));
+        vm.writeLine(logPath, string.concat("calculated amount:", vm.toString(amount)));
+      
+        uint bal1 = softToken.balanceOf(address(beneficiary));
+        assertEq(bal1, 0, "beneficiary balance should be 0 initially");
+        vm.roll(block.number + numberOfBlocks);
+        vesting.release();
+        uint released = vesting.released();
+        vm.writeLine(logPath, string.concat("amount released:", vm.toString(released)));
+        assertEq(released, amount, "released amount should match");
+        uint bal2 = softToken.balanceOf(address(beneficiary));
+        vm.writeLine(logPath, string.concat("balance of beneficiary:", vm.toString(bal2)));
+        assert(bal2 >= bal1);
+        assert(bal2 == released);
+    
+    }
+
+}
+/*
+    function test_shouldAllowAnyAddressToUnlockVesting() public {
+         uint bal1 = softToken.balanceOf(address(dividendFactory));
+         vm.warp(startTimestamp + 1000);
+         vesting.unlock();
+         uint bal2 = softToken.balanceOf(address(dividendFactory));
+         assert(bal2 > bal1);
+         emit log_string("Vesting released 1000 seconds after startTimestamp");
+         emit log_uint(vesting.released(address(softToken)));
+
+         bal1 = softToken.balanceOf(address(dividendFactory));
+         vm.warp(startTimestamp + FOUR_YEARS);
+         vesting.unlock();
+         bal2 = softToken.balanceOf(address(dividendFactory));
+         assert(bal2 > bal1);
+         emit log_string("Vesting released after 4 years");
+         emit log_uint(vesting.released(address(softToken)));
+
+         //all vested now
+         bal1 = softToken.balanceOf(address(dividendFactory));
+         vm.warp(startTimestamp + FOUR_YEARS + 1000);
+         vesting.unlock();
+         bal2 = softToken.balanceOf(address(dividendFactory));
+         assertEq(bal2, bal1);
+         emit log_string("Vesting released after 4 years + 1000 seconds");
+         emit log_uint(vesting.released(address(softToken)));
+
+    }
+    */
+

@@ -1,0 +1,254 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import {CafeCosmosTest} from "./util/CafeCosmosTest.sol";
+import {Redistributor} from "../src/Redistributor.sol";
+import {MI} from "./MockItems.sol";
+import "forge-std/console.sol";
+
+contract RedistributorTest is CafeCosmosTest {
+  
+
+    function setUp() public override {
+        super.setUp();
+    }
+
+    function test_createSubSections() public {
+        Redistributor redistributor2;
+        redistributor2 = new Redistributor(worldAddress, address(softToken));
+
+        Redistributor.SubSectionCreation[] memory subsections = new Redistributor.SubSectionCreation[](2);
+        uint256[] memory poolIdentifiersSubsection1 = new uint256[](2);
+        poolIdentifiersSubsection1[0] = 5;
+        poolIdentifiersSubsection1[1] = 6;
+
+        uint256[] memory poolIdentifiersSubsection2 = new uint256[](2);
+        poolIdentifiersSubsection2[0] = 7;
+        poolIdentifiersSubsection2[1] = 8;
+
+        subsections[0] = Redistributor.SubSectionCreation(100, "Subsection 1", poolIdentifiersSubsection1);
+        subsections[1] = Redistributor.SubSectionCreation(200, "Subsection 2", poolIdentifiersSubsection2);
+
+        redistributor2.createSubSections(subsections);
+
+        for (uint256 i = 0; i < subsections.length; i++) {
+            Redistributor.SubSection memory subsection = redistributor2.getSubSection(i);
+            assertEq(subsection.masterShares, subsections[i].masterShares, "Master shares should match");
+            assertEq(subsection.name, subsections[i].name, "Name should match");
+            assertEq(subsection.poolIds.length, 2);
+            if(i == 0) {
+                assertEq(subsection.poolIds[0], 1); //index 1 is the first pool created
+                assertEq(redistributor2.identifierToPoolId(5), 1);
+                assertEq(subsection.poolIds[1], 2);
+                assertEq(redistributor2.identifierToPoolId(6), 2);
+            } else {
+                assertEq(subsection.poolIds[0], 3);
+                assertEq(redistributor2.identifierToPoolId(7), 3);
+                assertEq(subsection.poolIds[1], 4);
+                assertEq(redistributor2.identifierToPoolId(8), 4);
+            }
+        }
+    }
+
+    function test_createPool() public {
+        redistributor.createPool(MI.MILK, uint256(RedistributorCategories.drinks), true);
+    }
+
+    function test_redistributeFunds() public {
+        softToken.transfer(address(redistributor), 1000);
+        redistributor.redistributeFunds();
+        //mains
+        vm.startPrank(worldAddress);
+        redistributor.mintShares(MI.MAC_N_CHEESE, 100);
+        redistributor.mintShares(MI.MAC_N_CHEESE, 70);
+        redistributor.mintShares(MI.MAC_N_CHEESE, 30);
+        assertEq((redistributor.getPool(MI.MAC_N_CHEESE)).totalShares, 200);
+        assertEq((redistributor.getPool(MI.MAC_N_CHEESE)).tokenBalance, 162);
+        
+        redistributor.mintShares(MI.SHAWARMA, 50);
+        assertEq((redistributor.getPool(MI.SHAWARMA)).totalShares, 50);
+        assertEq((redistributor.getPool(MI.SHAWARMA)).tokenBalance, 162);
+        
+        redistributor.mintShares(MI.PIZZA, 52);
+        assertEq((redistributor.getPool(MI.PIZZA)).totalShares, 52);
+        assertEq((redistributor.getPool(MI.PIZZA)).tokenBalance, 162);
+
+        redistributor.mintShares(MI.BURGER, 54);
+        assertEq((redistributor.getPool(MI.BURGER)).totalShares, 54);
+        assertEq((redistributor.getPool(MI.BURGER)).tokenBalance, 162);
+
+        //drinks
+        redistributor.mintShares(MI.SMOOTHIE, 100);
+        assertEq((redistributor.getPool(MI.SMOOTHIE)).totalShares, 100);
+
+        redistributor.mintShares(MI.BANANA_MILK, 110);
+        assertEq((redistributor.getPool(MI.BANANA_MILK)).totalShares, 110);
+
+        redistributor.mintShares(MI.COFFEE, 120);
+        assertEq((redistributor.getPool(MI.COFFEE)).totalShares, 120);
+
+        //desserts
+        redistributor.mintShares(MI.CROISSANT, 130);
+        assertEq((redistributor.getPool(MI.CROISSANT)).totalShares, 130);
+
+        redistributor.mintShares(MI.CUPCAKE, 140);
+        assertEq((redistributor.getPool(MI.CUPCAKE)).totalShares, 140); 
+    }
+
+    function test_withdrawFunds() public {
+        softToken.transfer(address(redistributor), 1000e18);
+        redistributor.redistributeFunds();
+
+        vm.startPrank(worldAddress);
+        redistributor.mintShares(MI.MAC_N_CHEESE, 30);
+        redistributor.mintShares(MI.SHAWARMA, 50);
+        redistributor.mintShares(MI.PIZZA, 52);
+        redistributor.mintShares(MI.BURGER, 54);
+        redistributor.mintShares(MI.SMOOTHIE, 100);
+        redistributor.mintShares(MI.BANANA_MILK, 120);
+        redistributor.mintShares(MI.CROISSANT, 130);
+        redistributor.mintShares(MI.CUPCAKE, 140);
+
+        vm.expectRevert("Redistributor: not enough shares");
+        redistributor.withdrawFunds(MI.MAC_N_CHEESE, 31);
+
+        uint256 bal1 = softToken.balanceOf(worldAddress);
+        redistributor.withdrawFunds(MI.MAC_N_CHEESE, 30);
+        uint256 bal2 = softToken.balanceOf(worldAddress);
+        assertEq((bal2 - bal1), 1625e17);
+
+        vm.expectRevert("Redistributor: not enough shares");
+        redistributor.withdrawFunds(MI.MAC_N_CHEESE, 1);
+        assertEq((redistributor.getPool(MI.MAC_N_CHEESE)).totalShares, 0);
+
+        bal1 = softToken.balanceOf(worldAddress);
+        redistributor.withdrawFunds(MI.BANANA_MILK, 60);
+        bal2 = softToken.balanceOf(worldAddress);
+        assertEq((bal2 - bal1), 125e17);
+        assertEq((redistributor.getPool(MI.BANANA_MILK)).totalShares, 60);
+        
+        vm.stopPrank();
+        redistributor.createPool(420, 2 , true);
+
+        vm.startPrank(worldAddress);
+        redistributor.mintShares(420, 100);
+        bal1 = softToken.balanceOf(worldAddress);
+        redistributor.withdrawFunds(420, 50);
+        bal2 = softToken.balanceOf(worldAddress);
+        assertEq((bal2 - bal1), 0);
+        assertEq((redistributor.getPool(420)).totalShares, 50);
+
+        bal1 = softToken.balanceOf(worldAddress);
+        redistributor.withdrawFunds(MI.BANANA_MILK, 30);
+        bal2 = softToken.balanceOf(worldAddress);
+        assertEq((bal2 - bal1), 625e16);
+        assertEq((redistributor.getPool(MI.BANANA_MILK)).totalShares, 30);
+
+        bal1 = softToken.balanceOf(worldAddress);
+        redistributor.withdrawFunds(MI.BANANA_MILK, 10);
+        bal2 = softToken.balanceOf(worldAddress);
+        assertEq((bal2 - bal1), 2083333333333333333);
+        assertEq((redistributor.getPool(MI.BANANA_MILK)).totalShares, 20);
+
+        bal1 = softToken.balanceOf(worldAddress);
+        redistributor.withdrawFunds(MI.BANANA_MILK, 10);
+        bal2 = softToken.balanceOf(worldAddress);
+        assertEq((bal2 - bal1), 2083333333333333333);
+        assertEq((redistributor.getPool(MI.BANANA_MILK)).totalShares, 10);
+
+        //test for inactive pool
+        vm.stopPrank();
+        redistributor.setPoolActivity(MI.BANANA_MILK, false);
+        vm.startPrank(worldAddress);
+        bal1 = softToken.balanceOf(worldAddress);
+        redistributor.withdrawFunds(MI.BANANA_MILK, 10);
+        bal2 = softToken.balanceOf(worldAddress);
+        assertEq((bal2 - bal1), 2083333333333333334);
+        assertEq((redistributor.getPool(MI.BANANA_MILK)).totalShares, 0);
+    }
+
+    function test_mintShares() public {
+        uint256 sharesToMint = 100;
+        
+        vm.startPrank(worldAddress);
+        uint256 initialShares = (redistributor.getPool(MI.BANANA_MILK)).totalShares;
+        redistributor.mintShares(MI.BANANA_MILK, sharesToMint);
+        uint256 newShares = (redistributor.getPool(MI.BANANA_MILK)).totalShares;
+
+        assertEq(newShares, (initialShares + sharesToMint));
+
+        vm.expectRevert("Redistributor: Invalid identifier");
+        redistributor.mintShares(42069, 100);
+
+        vm.stopPrank();
+        redistributor.setPoolActivity(MI.BANANA_MILK, false);
+
+        vm.prank(worldAddress);
+        vm.expectRevert("Redistributor: Pool is inactive");
+        redistributor.mintShares(MI.BANANA_MILK, 10);
+    }
+
+    function test_burnShares() public {
+        uint256 sharesToMint = 100;
+
+        vm.startPrank(worldAddress);
+        redistributor.mintShares(MI.BANANA_MILK, sharesToMint);
+
+        uint256 initialShares = (redistributor.getPool(MI.BANANA_MILK)).totalShares;
+        redistributor.burnShares(MI.BANANA_MILK, sharesToMint);
+        uint256 newShares = (redistributor.getPool(MI.BANANA_MILK)).totalShares;
+
+        assertEq(newShares, (initialShares - sharesToMint));
+
+        vm.expectRevert("Redistributor: Invalid identifier");
+        redistributor.burnShares(42069, 100);
+
+        redistributor.mintShares(MI.BANANA_MILK, sharesToMint);
+        
+        vm.stopPrank();
+        redistributor.setPoolActivity(MI.BANANA_MILK, false);
+
+        vm.prank(worldAddress);
+        redistributor.burnShares(MI.BANANA_MILK, sharesToMint);
+        assertEq((redistributor.getPool(MI.BANANA_MILK)).totalShares, 0);    
+    }
+
+    function test_setSubSectionMasterShares() public {
+        redistributor.setSubSectionMasterShares(0, 0);
+        uint256 masterShares = (redistributor.getSubSection(0)).masterShares;
+        assertEq(masterShares, 0);
+
+        softToken.transfer(address(redistributor), 1000e18);
+        redistributor.redistributeFunds();
+
+        assertEq((redistributor.getPool(MI.MAC_N_CHEESE)).tokenBalance, 0);
+        assertEq((redistributor.getPool(MI.SHAWARMA)).tokenBalance, 0);
+        assertEq((redistributor.getPool(MI.PIZZA)).tokenBalance, 0);
+        assertEq((redistributor.getPool(MI.BURGER)).tokenBalance, 0);
+
+        redistributor.setSubSectionMasterShares(0, 80);
+        redistributor.setSubSectionMasterShares(1, 10);
+        redistributor.setSubSectionMasterShares(2, 5);
+        masterShares = (redistributor.getSubSection(0)).masterShares;
+        assertEq(masterShares, 80);
+
+        softToken.transfer(address(redistributor), 1000e18);
+        redistributor.redistributeFunds();
+
+        vm.startPrank(worldAddress);
+        redistributor.mintShares(MI.MAC_N_CHEESE, 10);
+        redistributor.mintShares(MI.SHAWARMA, 10);
+        redistributor.mintShares(MI.PIZZA, 10);
+        redistributor.mintShares(MI.BURGER, 10);
+
+        assertEq((redistributor.getPool(MI.MAC_N_CHEESE)).tokenBalance, 210526315789473684210);
+        assertEq((redistributor.getPool(MI.SHAWARMA)).tokenBalance, 210526315789473684210);
+        assertEq((redistributor.getPool(MI.PIZZA)).tokenBalance, 210526315789473684210);
+        assertEq((redistributor.getPool(MI.BURGER)).tokenBalance, 210526315789473684210);
+
+        redistributor.withdrawFunds(MI.MAC_N_CHEESE, 10);
+        redistributor.withdrawFunds(MI.SHAWARMA, 10);
+        redistributor.withdrawFunds(MI.PIZZA, 10);
+        redistributor.withdrawFunds(MI.BURGER, 10);
+    }
+}

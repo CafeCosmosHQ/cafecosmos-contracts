@@ -1,0 +1,6912 @@
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4059206354
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot generated:214
+slot:0
+slot generated:214
+slot:0
+slot generated:117
+slot:0
+slot generated:28
+slot:0
+slot generated:119
+slot:0
+slot generated:210
+slot:0
+slot generated:111
+slot:0
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+seed:805671717
+groupId generated:1
+slot generated:211
+slot:0
+groupId generated:2
+slot generated:213
+slot:0
+groupId generated:2slot:0
+
+slot:0
+groupId generated:2
+slot generated:118
+groupId generated:2
+slot:0
+slot generated:118
+groupId generated:1
+groupId generated:1slot:0
+
+groupId generated:1slot generated:114
+
+slot:0
+groupId generated:2
+slot generated:120
+groupId generated:1
+slot:0
+groupId generated:2
+slot generated:114
+slot:0
+groupId generated:2
+slot generated:219
+groupId generated:2
+slot:0
+groupId generated:1
+slot generated:118
+slot:0
+groupId generated:1
+slot generated:110
+slot:0groupId generated:1
+
+slot:0
+slot:0
+groupId generated:2
+slot generated:217
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+seed:98668022
+slot generated:118
+slot:0
+groupId generated:2
+slot:0
+groupId generated:1
+slot:0
+groupId generated:2
+slot generated:219
+slot:0
+slot generated:116
+groupId generated:2
+slot:0
+slot:0
+groupId generated:1
+slot:0
+slot generated:29
+groupId generated:1slot:0
+
+groupId generated:2slot:0
+
+slot:0
+slot generated:120
+groupId generated:1slot:0
+
+slot generated:211
+groupId generated:1
+slot:0
+slot:0
+groupId generated:1
+slot:0
+slot generated:217
+groupId generated:1
+slot:0
+slot generated:217
+groupId generated:2
+groupId generated:1
+slot:0
+slot generated:217
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+seed:805671717
+slot generated:211
+groupId generated:1
+groupId generated:1
+slot:0
+groupId generated:1
+groupId generated:1
+groupId generated:1
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+groupId generated:2
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+groupId generated:2
+slot generated:114
+slot:0
+groupId generated:2
+slot generated:219
+slot:0
+groupId generated:2
+slot generated:118
+slot:0
+groupId generated:2
+slot generated:110
+slot:0
+groupId generated:2
+slot:0
+slot:0
+groupId generated:1
+slot generated:217
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+seed:4026901747
+slot:0groupId generated:2
+
+slot generated:111
+groupId generated:2slot:0
+slot generated:216
+slot:0
+slot generated:111
+
+slot:0
+slot generated:113
+groupId generated:1
+slot:0
+groupId generated:1
+slot generated:113
+groupId generated:2
+slot:0
+slot generated:218
+groupId generated:2slot:0
+slot generated:117
+
+slot:0
+slot generated:216
+groupId generated:2
+slot:0
+slot:0
+slot:0
+slot generated:19
+groupId generated:2
+slot:0
+slot:0
+groupId generated:2
+groupId generated:2slot:0
+
+slot generated:214
+groupId generated:2slot:0
+
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+seed:4026959181
+slot generated:118
+slot:0
+slot generated:219
+groupId generated:1
+slot:0
+groupId generated:1
+slot generated:213
+groupId generated:1
+slot:0
+slot generated:215groupId generated:1
+
+slot:0
+groupId generated:2
+slot generated:219
+slot:0
+slot generated:219
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+groupId generated:2
+groupId generated:1
+slot:0
+groupId generated:2
+slot:0
+slot:0
+groupId generated:2
+slot generated:118
+groupId generated:1
+groupId generated:2
+slot:0
+groupId generated:2
+slot generated:219
+slot:0
+slot generated:118
+groupId generated:1
+slot:0
+slot generated:217
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+groupId generated:2
+seed:4026905451
+slot:0
+slot:0
+groupId generated:2
+slot:0
+groupId generated:2
+slot:0
+groupId generated:1
+slot:0
+groupId generated:1slot generated:119
+slot:0
+
+slot generated:119
+slot:0
+groupId generated:1
+slot generated:218
+groupId generated:1
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot:0
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:2
+slot:0
+groupId generated:1
+groupId generated:2
+groupId generated:2
+groupId generated:1
+groupId generated:1
+slot generated:115
+slot:0
+groupId generated:2
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897902
+slot generated:116
+slot:0
+slot generated:120
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+seed:4026901085
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+seed:4026948659
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:111
+slot:0
+slot generated:19
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+seed:4026897191
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897533
+slot generated:116
+slot:0
+slot generated:219
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot:0
+slot:0
+slot generated:114
+slot:0
+slot generated:118
+slot:0
+slot:0
+slot:0
+slot generated:27
+slot:0
+slot generated:114
+slot:0
+slot generated:16
+slot:0
+slot generated:29
+slot:0
+slot generated:211
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026898877
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+seed:563677148
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:28
+slot:0
+slot generated:212
+slot:0
+slot generated:210
+slot:0
+slot generated:19
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:113
+slot:0
+slot generated:212
+slot:0
+slot generated:117
+slot:0
+seed:4026898345
+slot:0
+slot generated:111
+slot:0
+slot generated:113
+slot:0
+slot generated:17
+slot:0
+slot generated:17
+slot:0
+slot generated:111
+slot:0
+slot generated:28
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot generated:115
+slot:0
+slot generated:115
+slot:0
+seed:4026902359
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:215
+slot:0
+slot generated:213
+slot:0
+slot generated:120
+slot:0
+slot generated:213
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:118
+slot:0
+slot generated:217
+seed:4026897218
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:28
+slot:0
+slot generated:113
+slot:0
+slot generated:210
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot generated:117
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+seed:94134561
+slot:0
+slot generated:26
+slot:0
+slot generated:214
+slot:0
+slot generated:210
+slot:0
+slot generated:212
+slot:0
+slot generated:117
+slot:0
+slot generated:17
+slot:0
+slot generated:113
+slot:0
+slot generated:214
+slot:0
+slot generated:26
+slot:0
+slot generated:214
+slot:0
+slot generated:19
+slot:0
+slot generated:111
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:315047573
+slot:0
+slot generated:24
+slot:0
+slot generated:113
+slot:0
+slot generated:19
+slot:0
+slot generated:19
+slot:0
+slot generated:117
+slot:0
+slot generated:210
+slot:0
+slot generated:212
+slot:0
+slot generated:113
+slot:0
+slot generated:212
+slot:0
+slot generated:115
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+seed:465798449
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+seed:4026898827
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4221611776
+slot:0
+slot generated:24
+slot:0
+slot generated:19
+slot:0
+slot generated:210
+slot:0
+slot generated:26
+slot:0
+slot generated:113
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:218
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:28
+slot:0
+seed:4026899613
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:19
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+slot generated:17
+slot:0
+slot generated:119
+slot:0
+slot generated:212
+slot:0
+slot generated:214
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4026897198
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:114
+slot:0
+slot generated:29
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:18
+seed:576580165
+slot generated:116
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:215
+slot:0
+slot generated:120
+slot:0
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4100933980
+slot generated:211
+slot:0
+slot:0
+slot:0
+slot generated:215
+slot:0
+slot generated:112
+slot:0
+slot generated:118
+slot:0
+slot generated:215
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:120
+slot:0
+slot generated:116
+slot:0
+slot generated:120
+seed:4026899101
+slot:0
+slot generated:17
+slot:0
+slot generated:111
+slot:0
+slot generated:210
+slot:0
+slot generated:15
+slot:0
+slot generated:210
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026900939
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026898788
+slot:0
+slot generated:111
+slot:0
+slot generated:19
+slot:0
+slot generated:212
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot generated:28
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot generated:17
+slot:0
+slot generated:119
+slot:0
+slot generated:212
+slot:0
+slot generated:113
+slot:0
+seed:4026899076
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:120
+slot:0
+slot generated:120
+slot:0
+slot generated:219
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:18
+slot:0
+slot generated:211
+slot:0
+slot generated:112
+slot:0
+slot generated:27
+slot:0
+slot generated:18
+seed:4026898073
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:214
+slot:0
+slot generated:119
+slot:0
+slot generated:19
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:15
+slot:0
+slot generated:214
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897980
+slot generated:213
+slot:0
+slot generated:213
+slot:0
+slot generated:110
+slot:0
+slot generated:120
+slot:0
+slot generated:27
+slot:0
+slot:0
+slot:0
+slot generated:112
+slot:0
+slot generated:112
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+seed:4026898955
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:119
+slot:0
+slot generated:113
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:214
+slot:0
+slot generated:214
+slot:0
+slot generated:214
+slot:0
+seed:4026899536
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897877
+slot generated:217
+slot:0
+slot generated:110
+slot:0
+slot generated:118
+slot:0
+slot generated:211
+slot:0
+slot generated:29
+slot:0
+slot generated:217
+slot:0
+slot generated:25
+slot:0
+slot generated:213
+slot:0
+slot generated:29
+slot:0
+slot generated:213
+slot:0
+slot generated:112
+slot:0
+slot generated:112
+slot:0
+slot generated:118
+seed:4026910727
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:255013218
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:28
+slot:0
+slot generated:113
+slot:0
+slot generated:210
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot generated:117
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+seed:125954717
+slot generated:118
+slot:0
+slot generated:29
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot generated:112
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:217
+slot:0
+slot generated:116
+slot:0
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot generated:120
+slot:0
+slot generated:217
+seed:4026910211
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:17
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4029593187
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot generated:214
+slot:0
+slot generated:115
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:19
+slot:0
+slot generated:119
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026898211
+slot:0
+slot generated:115
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:15
+slot:0
+slot generated:113
+slot:0
+slot generated:212
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot generated:119
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+seed:4259214216
+slot:0
+slot generated:28
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026897368
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot generated:19
+slot:0
+slot generated:212
+slot:0
+slot generated:17
+slot:0
+slot generated:113
+slot:0
+slot generated:28
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+seed:4026897664
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+slot generated:210
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+seed:156085441
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:212
+slot:0
+seed:4026898993
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:214
+slot:0
+slot generated:212
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026911256
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:214
+slot:0
+slot generated:115
+slot:0
+slot generated:115
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+seed:4026899197
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:117
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:203370491
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:28
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:19
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+seed:155554598
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026897902
+slot generated:116
+slot:0
+slot generated:120
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+seed:327325150
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot generated:115
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897281
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+seed:4026897795
+slot:0
+slot:0
+slot:0
+slot generated:19
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:26
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4026897391
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:17
+slot:0
+slot generated:113
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot generated:214
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026897203
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:26
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot generated:218
+slot:0
+slot generated:28
+slot:0
+seed:506357681
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:115
+slot:0
+slot generated:214
+slot:0
+slot generated:19
+slot:0
+slot generated:115
+slot:0
+slot generated:19
+slot:0
+slot generated:210
+slot:0
+slot generated:212
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:395926177
+slot:0
+slot generated:214
+slot:0
+slot generated:214
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:214
+slot:0
+slot generated:115
+slot:0
+slot generated:24
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026898085
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot generated:115
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot generated:119
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+seed:4026898613
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:115
+slot:0
+slot generated:214
+slot:0
+slot generated:19
+slot:0
+slot generated:115
+slot:0
+slot generated:19
+slot:0
+slot generated:210
+slot:0
+slot generated:212
+slot:0
+seed:645926937
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:113
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4058727853
+slot generated:213
+slot:0
+slot generated:213
+slot:0
+slot generated:110
+slot:0
+slot generated:120
+slot:0
+slot generated:27
+slot:0
+slot:0
+slot:0
+slot generated:112
+slot:0
+slot generated:112
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+seed:4026906467
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+seed:218808580
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+slot generated:210
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+seed:4030663168
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026899163
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:271069557
+slot:0
+slot:0
+slot generated:120
+slot:0
+slot:0
+slot:0
+slot generated:219
+slot:0
+slot generated:219
+slot:0
+slot generated:114
+slot:0
+slot generated:213
+slot:0
+slot generated:110
+slot:0
+slot generated:211
+slot:0
+slot generated:211
+slot:0
+slot generated:217
+slot:0
+slot generated:112
+slot:0
+slot generated:27
+seed:4027154318
+slot generated:217
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:16
+slot:0
+slot generated:213
+slot:0
+slot generated:114
+slot:0
+slot generated:213
+slot:0
+slot generated:217
+slot:0
+slot generated:211
+slot:0
+slot generated:217
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897218
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:28
+slot:0
+slot generated:113
+slot:0
+slot generated:210
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot generated:117
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4026897965
+slot generated:213
+slot:0
+slot generated:213
+slot:0
+slot generated:110
+slot:0
+slot generated:120
+slot:0
+slot generated:27
+slot:0
+slot:0
+slot:0
+slot generated:112
+slot:0
+slot generated:112
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+seed:4026897653
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot:0
+slot:0
+slot generated:215
+slot:0
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot generated:118
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:116
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:219
+seed:4026899042
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot generated:214
+slot:0
+slot generated:19
+slot:0
+slot generated:28
+slot:0
+slot generated:113
+slot:0
+slot generated:28
+slot:0
+slot generated:210
+slot:0
+seed:339140895
+slot generated:120
+slot:0
+slot generated:110
+slot:0
+slot generated:29
+slot:0
+slot generated:213
+slot:0
+slot generated:213
+slot:0
+slot generated:110
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+slot:0
+slot generated:213
+slot:0
+slot generated:114
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4032250734
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:218
+slot:0
+slot generated:17
+slot:0
+slot generated:111
+slot:0
+seed:4026901895
+slot generated:211
+slot:0
+slot generated:118
+slot:0
+slot generated:112
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:213
+slot:0
+slot generated:29
+slot:0
+slot generated:29
+slot:0
+slot generated:27
+slot:0
+slot generated:27
+slot:0
+slot generated:29
+seed:4026897191
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4034786451
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:117
+slot:0
+slot generated:119
+slot:0
+slot generated:113
+slot:0
+seed:4026897524
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026899919
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:120
+slot:0
+slot generated:120
+slot:0
+slot generated:219
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:18
+slot:0
+slot generated:211
+slot:0
+slot generated:112
+slot:0
+slot generated:27
+slot:0
+slot generated:18
+seed:4247103387
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+seed:668587960
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot generated:113
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+seed:4026897281
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+seed:4026898826
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:212
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:212
+slot:0
+seed:4026898804
+slot generated:213
+slot:0
+slot generated:211
+slot:0
+slot generated:120
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:110
+slot:0
+slot generated:215
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:211
+seed:4026899244
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot generated:118
+slot:0
+slot:0
+slot:0
+slot generated:112
+slot:0
+slot generated:213
+slot:0
+slot generated:120
+slot:0
+slot generated:116
+slot:0
+slot generated:116
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:217
+slot:0
+slot generated:114
+seed:4026898587
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:113
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+seed:437063635
+slot:0
+slot:0
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+seed:339140895
+slot generated:120
+slot:0
+slot generated:110
+slot:0
+slot generated:29
+slot:0
+slot generated:213
+slot:0
+slot generated:213
+slot:0
+slot generated:110
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+slot:0
+slot generated:213
+slot:0
+slot generated:114
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4134897384
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:19
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:117
+slot:0
+slot generated:117
+slot:0
+slot generated:117
+slot:0
+seed:4026897217
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+seed:4055237256
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:119
+slot:0
+slot generated:113
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:214
+slot:0
+slot generated:214
+slot:0
+slot generated:214
+slot:0
+seed:4026898764
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot generated:117
+slot:0
+slot generated:115
+slot:0
+slot generated:214
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+seed:140389951
+slot generated:116
+slot:0
+slot:0
+slot:0
+slot generated:211
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:219
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:213
+slot:0
+slot:0
+seed:4026899784
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot generated:214
+slot:0
+slot generated:119
+slot:0
+slot generated:113
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4026897203
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:26
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot generated:218
+slot:0
+slot generated:28
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:464105190
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:4026899308
+slot generated:213
+slot:0
+slot generated:29
+slot:0
+slot generated:112
+slot:0
+slot generated:213
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:219
+slot:0
+slot:0
+slot:0
+slot generated:114
+slot:0
+slot generated:217
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:213
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4026899689
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:315047573
+slot:0
+slot generated:24
+slot:0
+slot generated:113
+slot:0
+slot generated:19
+slot:0
+slot generated:19
+slot:0
+slot generated:117
+slot:0
+slot generated:210
+slot:0
+slot generated:212
+slot:0
+slot generated:113
+slot:0
+slot generated:212
+slot:0
+slot generated:115
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4026902003
+slot:0
+slot generated:28
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:28
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897737
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897866
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:309281950
+slot generated:116
+slot:0
+slot generated:213
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:215
+slot:0
+slot generated:120
+slot:0
+slot generated:110
+slot:0
+slot generated:215
+slot:0
+slot generated:112
+slot:0
+slot generated:213
+slot:0
+slot generated:112
+slot:0
+slot generated:213
+slot:0
+slot generated:118
+seed:4026901610
+slot:0
+slot generated:117
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+seed:4026900327
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+seed:4026899856
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026899314
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+seed:4026907888
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot generated:119
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:26
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+seed:4026897420
+slot generated:120
+slot:0
+slot generated:118
+slot:0
+slot generated:27
+slot:0
+slot generated:118
+slot:0
+slot generated:120
+slot:0
+slot generated:118
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:112
+slot:0
+slot:0
+slot:0
+slot generated:112
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+seed:4026897192
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026898217
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+seed:379709790
+slot generated:116
+slot:0
+slot generated:219
+slot:0
+slot generated:29
+slot:0
+slot generated:114
+slot:0
+slot generated:213
+slot:0
+slot generated:29
+slot:0
+slot generated:213
+slot:0
+slot generated:213
+slot:0
+slot generated:29
+slot:0
+slot generated:211
+slot:0
+slot generated:217
+slot:0
+slot generated:27
+slot:0
+slot generated:18
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026899391
+slot generated:116
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:211
+slot:0
+slot generated:118
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:213
+slot:0
+slot generated:114
+slot:0
+slot generated:18
+seed:4026897392
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot generated:119
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:26
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+seed:4026897424
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:4026906006
+slot generated:118
+slot:0
+slot:0
+slot:0
+slot generated:219
+slot:0
+slot generated:116
+slot:0
+slot:0
+slot:0
+slot generated:29
+slot:0
+slot:0
+slot:0
+slot generated:120
+slot:0
+slot generated:211
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026906467
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:19
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026903753
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot generated:214
+slot:0
+slot generated:119
+slot:0
+slot generated:113
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+seed:4158515884
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:29
+slot:0
+slot generated:213
+slot:0
+slot generated:211
+slot:0
+slot generated:16
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:116
+slot:0
+slot generated:219
+slot:0
+slot generated:112
+seed:175519728
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+seed:4026897607
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:4026898515
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:17
+slot:0
+slot generated:210
+slot:0
+slot generated:28
+slot:0
+slot generated:19
+slot:0
+slot generated:216
+slot:0
+slot generated:19
+slot:0
+slot generated:117
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+seed:4026899303
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:16
+slot:0
+slot:0
+slot:0
+slot generated:116
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:116
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897195
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:609866820
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+seed:4026902627
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+seed:4176312553
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:210
+slot:0
+slot generated:117
+slot:0
+slot generated:117
+slot:0
+slot generated:111
+slot:0
+slot generated:218
+slot:0
+slot generated:212
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+seed:4026901530
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:17
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4072002598
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+seed:4028892415
+slot generated:213
+slot:0
+slot generated:211
+slot:0
+slot generated:110
+slot:0
+slot generated:112
+slot:0
+slot generated:29
+slot:0
+slot generated:114
+slot:0
+slot generated:114
+slot:0
+slot generated:114
+slot:0
+slot generated:118
+slot:0
+slot generated:211
+slot:0
+slot generated:118
+slot:0
+slot generated:112
+slot:0
+slot generated:110
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4032613973
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+seed:4026898906
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026898095
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:210
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026898453
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:111
+slot:0
+slot generated:19
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+seed:232134509
+slot generated:116
+slot:0
+slot generated:29
+slot:0
+slot generated:217
+slot:0
+slot generated:211
+slot:0
+slot generated:120
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:110
+seed:4026902061
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+seed:4026902621
+slot generated:116
+slot:0
+slot generated:29
+slot:0
+slot generated:120
+slot:0
+slot generated:112
+slot:0
+slot generated:211
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:29
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:118
+slot:0
+slot generated:219
+slot:0
+slot generated:110
+seed:4026897767
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:722520012
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:219
+slot:0
+slot generated:116
+slot:0
+slot:0
+slot:0
+slot generated:29
+slot:0
+slot generated:118
+slot:0
+slot generated:116
+slot:0
+slot generated:18
+slot:0
+slot generated:213
+slot:0
+slot generated:29
+slot:0
+slot generated:213
+slot:0
+slot generated:112
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:667863126
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:17
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026899111
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+seed:4026897549
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:16
+slot:0
+slot:0
+slot:0
+slot generated:116
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:116
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026898034
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+seed:4026897191
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:4191322638
+slot generated:29
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:211
+slot:0
+slot generated:219
+slot:0
+slot generated:213
+slot:0
+slot generated:110
+slot:0
+slot generated:219
+slot:0
+slot generated:213
+slot:0
+slot generated:213
+slot:0
+slot generated:219
+slot:0
+slot generated:114
+slot:0
+slot:0
+seed:486732522
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+seed:4026897701
+slot:0
+slot generated:26
+slot:0
+slot generated:214
+slot:0
+slot generated:210
+slot:0
+slot generated:212
+slot:0
+slot generated:117
+slot:0
+slot generated:17
+slot:0
+slot generated:113
+slot:0
+slot generated:214
+slot:0
+slot generated:26
+slot:0
+slot generated:214
+slot:0
+slot generated:19
+slot:0
+slot generated:111
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026898366
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot generated:115
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:617112325
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+seed:4026897290
+slot:0
+slot generated:28
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4282239330
+slot:0
+slot generated:19
+slot:0
+slot generated:19
+slot:0
+slot generated:113
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:218
+slot:0
+slot generated:19
+slot:0
+slot generated:119
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+seed:568346102
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+seed:4026897664
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+slot generated:210
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:216
+slot:0
+seed:4039321629
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:26
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:115
+slot:0
+slot generated:218
+slot:0
+slot generated:28
+slot:0
+seed:4026908868
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+slot generated:218
+slot:0
+seed:4093668624
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:4240811516
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897890
+slot:0
+slot:0
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:210
+slot:0
+slot generated:113
+slot:0
+slot generated:218
+slot:0
+slot generated:214
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:28
+slot:0
+slot generated:214
+slot:0
+seed:26008808
+slot:0
+slot generated:111
+slot:0
+slot generated:113
+slot:0
+slot generated:119
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:218
+slot:0
+slot generated:214
+slot:0
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:507921907
+slot:0
+slot generated:28
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:28
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897370
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:28
+slot:0
+slot generated:212
+slot:0
+slot generated:210
+slot:0
+slot generated:19
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:113
+slot:0
+slot generated:212
+slot:0
+slot generated:117
+slot:0
+seed:4026897546
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:17
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026897844
+slot generated:29
+slot:0
+slot:0
+slot:0
+slot generated:215
+slot:0
+slot generated:118
+slot:0
+slot:0
+slot:0
+slot generated:219
+slot:0
+slot:0
+slot:0
+slot generated:215
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:219
+slot:0
+slot generated:112
+slot:0
+slot generated:18
+seed:328749168
+slot:0
+slot generated:111
+slot:0
+slot generated:113
+slot:0
+slot generated:17
+slot:0
+slot generated:17
+slot:0
+slot generated:111
+slot:0
+slot generated:28
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:212
+slot:0
+slot generated:115
+slot:0
+slot generated:115
+slot:0
+seed:4026897737
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:212
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot generated:117
+slot:0
+slot generated:19
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:212
+slot:0
+seed:4026897561
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:111
+slot:0
+slot generated:19
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot generated:19
+slot:0
+slot:0
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:110
+slot:0
+slot generated:217
+slot:0
+slot generated:29
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+seed:764022713
+slot:0
+slot generated:19
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot generated:111
+slot:0
+seed:609866820
+slot generated:118
+slot:0
+slot generated:219
+slot:0
+slot generated:213
+slot:0
+slot generated:215
+slot:0
+slot generated:219
+slot:0
+slot generated:219
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:217
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:4026898908
+slot generated:211
+slot:0
+slot:0
+slot:0
+slot generated:215
+slot:0
+slot generated:112
+slot:0
+slot generated:118
+slot:0
+slot generated:215
+slot:0
+slot generated:211
+slot:0
+slot generated:116
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:120
+slot:0
+slot generated:116
+slot:0
+slot generated:120
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026898964
+slot generated:211
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:112
+slot:0
+slot generated:217
+slot:0
+slot generated:219
+slot:0
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:217
+slot:0
+slot generated:116
+slot:0
+slot generated:217
+slot:0
+slot:0
+slot:0
+slot generated:217
+seed:4026898877
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:111
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:4026899588
+slot:0
+slot generated:113
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot generated:214
+slot:0
+slot generated:117
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot generated:113
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:141358469
+slot:0
+slot:0
+slot generated:114
+slot:0
+slot generated:16
+slot:0
+slot generated:219
+slot:0
+slot generated:16
+slot:0
+slot generated:211
+slot:0
+slot generated:217
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot:0
+slot:0
+slot generated:219
+seed:4026898664
+slot:0
+slot generated:117
+slot:0
+slot generated:216
+slot:0
+slot generated:115
+slot:0
+slot generated:210
+slot:0
+slot generated:214
+slot:0
+slot generated:216
+slot:0
+slot generated:214
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:212
+slot:0
+slot:0
+slot:0
+slot generated:218
+slot:0
+seed:805671717
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+seed:115894975
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:117
+slot:0
+slot generated:115
+slot:0
+slot generated:218
+slot:0
+slot generated:117
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+seed:4274038179
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:111
+slot:0
+slot generated:214
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:210
+slot:0
+slot:0
+slot:0
+slot generated:113
+slot:0
+slot generated:111
+slot:0
+slot generated:115
+slot:0
+slot generated:115
+slot:0
+seed:4026897190
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+seed:677759988
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:213
+slot:0
+slot generated:116
+slot:0
+slot generated:114
+slot:0
+slot generated:116
+slot:0
+slot generated:211
+slot:0
+slot generated:114
+slot:0
+slot generated:112
+slot:0
+slot generated:116
+slot:0
+slot generated:112
+slot:0
+slot generated:116
+slot:0
+slot:0
+seed:477264203
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:119
+slot:0
+slot:0
+slot:0
+slot generated:111
+slot:0
+slot generated:218
+slot:0
+slot generated:113
+slot:0
+slot generated:115
+slot:0
+slot generated:216
+slot:0
+slot generated:119
+slot:0
+seed:4026899011
+slot:0
+slot generated:115
+slot:0
+slot generated:111
+slot:0
+slot generated:119
+slot:0
+slot generated:218
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:216
+slot:0
+slot:0
+slot:0
+slot:0
+slot:0
+slot generated:115
+slot:0
+slot:0
+slot:0
+seed:4026908331
+slot:0
+slot generated:218
+slot:0
+slot:0
+slot:0
+slot generated:117
+slot:0
+slot generated:218
+slot:0
+slot generated:111
+slot:0
+slot generated:212
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:111
+slot:0
+slot generated:15
+slot:0
+slot generated:26
+slot:0
+slot generated:28
+slot:0
+seed:4064873886
+slot generated:114
+slot:0
+slot:0
+slot:0
+slot generated:217
+slot:0
+slot generated:217
+slot:0
+slot generated:112
+slot:0
+slot generated:110
+slot:0
+slot generated:114
+slot:0
+slot generated:27
+slot:0
+slot generated:118
+slot:0
+slot generated:213
+slot:0
+slot generated:116
+slot:0
+slot generated:219
+slot:0
+slot generated:211
+seed:805671717
+slot generated:211
+slot:0
+slot generated:213
+slot:0
+slot:0
+slot:0
+slot generated:118
+slot:0
+slot generated:118
+slot:0
+slot generated:114
+slot:0
+slot generated:120
+slot:0
+slot generated:114
+slot:0
+slot generated:219
+slot:0
+slot generated:118
+slot:0
+slot generated:110
+slot:0
+slot:0
+slot:0
+slot generated:217

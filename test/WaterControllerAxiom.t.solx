@@ -1,0 +1,175 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+import "forge-std/Test.sol";
+import {IAxiomV2Query} from "axiom-v2-contracts/contracts/interfaces/query/IAxiomV2Query.sol";
+import {Land} from "../contracts/Land.sol";
+import {Items} from "../contracts/tokens/Items.sol";
+import {Transformations, ITransformations} from "../contracts/Transformations.sol";
+import {LandTablesAndChairs} from "../contracts/LandTablesAndChairs.sol";
+import {LandTransform} from "../contracts/LandTransform.sol";
+import {PerlinItemConfig} from "../contracts/PerlinItemConfig.sol";
+import {SoftToken} from "../contracts/tokens/SoftToken.sol";
+import {LandNFTs} from "../contracts/tokens/LandNFTs.sol";
+import {MI} from "./MockItems.sol";
+
+import "@openzeppelin/contracts/utils/Strings.sol";
+import "forge-std/console.sol";
+import "forge-std/StdJson.sol";
+
+
+contract WaterControllerAxiomTest is Test {
+    using stdJson for string;
+    
+    Land public land;
+
+    Transformations public transformations;
+    SoftToken public softToken;
+    Items public items;
+    LandTablesAndChairs public landTablesAndChairs;
+    LandTransform public landTransform;
+    PerlinItemConfig public perlinItemConfig;
+    LandNFTs public landNFTs;
+    
+    uint256 SOFTCOST = 300;
+    uint256 PREMIUMCOST = 25;
+    uint256 LAND_X = 3;
+    uint256 LAND_Y = 3;
+    uint256 SCALE = 1;
+    uint256 numSamples = 31;
+    uint256 blockInterval = 1000;
+    uint256 minYieldTime = 2 minutes;
+    uint256 maxYieldTime = 2 days;
+    int256 minDelta = 1;
+    int256 maxDelta = 1000;
+    uint256 endBlockSlippage = 100;
+
+    address public axiomV2QueryMock = 0xf15cc7B983749686Cd1eCca656C3D3E46407DC1f;
+    bytes32 querySchema;
+    uint64 sourceChainId = 5;
+
+    uint256 landId;
+
+    function _axiomRequest() private {
+          string[] memory cli = new string[](10);
+            cli[0] = "npx";
+            cli[1] = "axiom";
+            cli[2] = "compile";
+            cli[3] = "axiom/circuit.ts";
+            cli[4] = "--function";
+            cli[5] = "feeAverage";
+            cli[6] = "--inputs";
+            cli[7] = "data/inputs/defaultInput.json";
+            cli[8] = "--provider";
+            cli[9] = vm.rpcUrl("goerli");
+            vm.ffi(cli);
+
+            // Use axiom cli to prove the client circuit on given input.json
+            cli[0] = "npx";
+            cli[1] = "axiom";
+            cli[2] = "run";
+            cli[3] = "axiom/circuit.ts";
+            cli[4] = "--function";
+            cli[5] = "feeAverage";
+            cli[6] = "--inputs";
+            cli[7] = "data/inputs/input.json";
+            cli[8] = "--provider";
+            cli[9] = vm.rpcUrl("goerli");
+            vm.ffi(cli);
+
+            // Generate args for sendQuery
+            string[] memory args = new string[](11);
+            args[0] = "npx";
+            args[1] = "axiom";
+            args[2] = "sendQueryArgs";
+            args[3] = vm.toString(address(land)); // the callback target address
+            args[4] = "--calldata"; // flag to return the encoded calldata
+            args[5] = "--refundAddress";
+            args[6] = vm.toString(msg.sender);
+            args[7] = "--sourceChainId";
+            args[8] = vm.toString(sourceChainId);
+            args[9] = "--provider";
+            args[10] = vm.rpcUrl("goerli");
+            vm.ffi(args);
+    }
+
+    function setUp() public {
+        vm.createSelectFork("goerli");
+        vm.makePersistent(axiomV2QueryMock);
+        vm.roll(10202441);
+
+        _axiomRequest();
+
+        string memory artifact = vm.readFile("data/build.json");
+        querySchema = bytes32(vm.parseJson(artifact, ".querySchema"));
+        emit log_named_bytes32("querySchema", querySchema);
+
+        land = new Land(axiomV2QueryMock, sourceChainId, querySchema);
+        vm.roll(block.number + 1000);
+
+        softToken = new SoftToken("SOFT", "SOFT");
+        landNFTs = new LandNFTs("LAND", "LAND");
+        items = new Items("http://ipfs.io/");
+        transformations = new Transformations();
+        landTablesAndChairs = new LandTablesAndChairs();
+        landTransform = new LandTransform();
+        perlinItemConfig = new PerlinItemConfig();
+        
+        land.setSoftToken(address(softToken));
+        land.setLandNFTs(address(landNFTs));
+        land.setItems(address(items));
+        land.setSoftCost(SOFTCOST);
+        land.setLandTablesAndChairsAddress(address(landTablesAndChairs));
+        land.setLandTransformAddress(address(landTransform));
+        land.setItemConfigAddress(address(perlinItemConfig));
+        land.setTransformationAddress(address(transformations));
+        transformations.setLand(address(land));
+        land.setSoftDestination(address(0x1337));
+        landNFTs.setLand(address(land));
+        land.setChunkSize(7);
+
+        uint256 soft_cost = land.calculateLandCost(0, LAND_X, LAND_Y);
+        softToken.approve(address(land), soft_cost);
+        landId = land.createLand(LAND_X, LAND_Y);
+        items.setApprovalForAll(address(land), true);
+        land.setWaterControllerParameters(numSamples, blockInterval, minYieldTime, maxYieldTime, endBlockSlippage, minDelta, maxDelta);
+        
+        require(land.getnumSamples() == numSamples, "Test: max samples don't match");
+    }
+
+    function testAxiomSendQuery() public {
+        vm.roll(10169972);
+    
+        // Read args from sendQuery.json
+        string memory sendQueryJson = vm.readFile("data/sendQuery.json");
+        bytes memory sendQueryCalldata = vm.parseJsonBytes(sendQueryJson, ".calldata");
+        // suggested payment value, in wei
+        uint256 value = vm.parseJsonUint(sendQueryJson, ".value");
+
+        (bool success,) = axiomV2QueryMock.call{value: value}(sendQueryCalldata);
+        require(success);
+    }
+
+    function testAxiomFulfillQuery() public {
+        testAxiomSendQuery();
+        // testAxiomSendQuery already proved the client circuit on input.json
+        // Now we read the outputs from output.json
+        string memory runOutput = vm.readFile("data/output.json");
+        bytes memory computeResults = vm.parseJson(runOutput, ".computeResults");
+        bytes32[] memory axiomResults = abi.decode(computeResults, (bytes32[]));
+
+        // WARNING: Without true Axiom fulfillment, the Ethereum data used in the client circuit is UNVERIFIED.
+
+        address caller = msg.sender; // this is who initiated the query
+        // For this test we will prank the AxiomV2Query fulfillment by pranking the callback with the axiomResults.
+        // In production, this call will be done by the AxiomV2Query contract AFTER the query has been fulfilled and validated.
+        vm.prank(axiomV2QueryMock);
+        string memory sendQueryJson = vm.readFile("data/sendQuery.json");
+        uint256 queryId = vm.parseJsonUint(sendQueryJson, ".queryId");
+        bytes memory extraData = ""; // no extraData in this example
+
+        land.axiomV2Callback(sourceChainId, caller, querySchema, queryId, axiomResults, extraData);
+
+        console.log(land.getWaterYieldTime());
+    }
+}
