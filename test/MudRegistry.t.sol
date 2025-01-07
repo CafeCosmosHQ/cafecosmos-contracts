@@ -22,7 +22,7 @@ contract MudRegistryTest is MudTestFoundry {
     function test_SystemRegistryCustomType() public {
 
         InitialLandItem[] memory items = new InitialLandItem[](1);
-        items[0] = InitialLandItem(1, 1, 1);
+        items[0] = InitialLandItem(1, 1, 1, 1, true);
 
         world.setInitialLandItems(items, 1, 1);
     }

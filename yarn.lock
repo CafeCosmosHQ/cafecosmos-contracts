@@ -804,14 +804,6 @@
     abitype "1.0.6"
     viem "2.21.19"
 
-"@latticexyz/schema-type@^3.0.0":
-  version "3.0.0-main-fb1cfef0c"
-  resolved "https://registry.yarnpkg.com/@latticexyz/schema-type/-/schema-type-3.0.0-main-fb1cfef0c.tgz#0c7c759e8c1e1f3173857d3c4474281d421374c7"
-  integrity sha512-9NcogIYz8MGzHdmeqymgld7zzrWdyWbF9bYWCMAABh61ctd47rD+m/AtVVg2o63EuVacOzKoe9zw4CiQGXj2RA==
-  dependencies:
-    abitype "1.0.0"
-    viem "2.9.20"
-
 "@latticexyz/store@2.2.14", "@latticexyz/store@^2.2.14":
   version "2.2.14"
   resolved "https://registry.yarnpkg.com/@latticexyz/store/-/store-2.2.14.tgz#e5154a04c67d295b56a9ec0d9cb0fdea43c1111f"
@@ -931,12 +923,12 @@
   resolved "https://registry.yarnpkg.com/@noble/hashes/-/hashes-1.3.3.tgz#39908da56a4adc270147bb07968bf3b16cfe1699"
   integrity sha512-V7/fPHgl+jsVPXqqeOzT8egNj2iBIVt+ECeMMG8TdcnTikP3oaBtUVqpT/gYCR68aEBJSF+XbYUxStjbFMqIIA==
 
-"@openzeppelin/contracts-upgradeable@^4.4.1":
+"@openzeppelin/contracts-upgradeable@^4.9.6":
   version "4.9.6"
   resolved "https://registry.yarnpkg.com/@openzeppelin/contracts-upgradeable/-/contracts-upgradeable-4.9.6.tgz#38b21708a719da647de4bb0e4802ee235a0d24df"
   integrity sha512-m4iHazOsOCv1DgM7eD7GupTJ+NFVujRZt1wzddDPSVGpWdKq1SKkla5htKG7+IS4d2XOCtzkUNwRZ7Vq5aEUMA==
 
-"@openzeppelin/contracts@^4.7.3":
+"@openzeppelin/contracts@^4.9.6":
   version "4.9.6"
   resolved "https://registry.yarnpkg.com/@openzeppelin/contracts/-/contracts-4.9.6.tgz#2a880a24eb19b4f8b25adc2a5095f2aa27f39677"
   integrity sha512-xSmezSupL+y9VkHZJGDoCBpmnB2ogM13ccaYDWqJTfS3dbuHkgjuwDFUmaFauBCboQMGB/S5UqUl2y54X99BmA==
@@ -1407,6 +1399,11 @@
   resolved "https://registry.yarnpkg.com/@solidity-parser/parser/-/parser-0.17.0.tgz#52a2fcc97ff609f72011014e4c5b485ec52243ef"
   integrity sha512-Nko8R0/kUo391jsEHHxrGM07QFdnPGvlmox4rmH0kNiNAashItAilhy4Mv4pK5gQmW5f4sXAF58fwJbmlkGcVw==
 
+"@solidity-parser/parser@^0.19.0":
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/@solidity-parser/parser/-/parser-0.19.0.tgz#37a8983b2725af9b14ff8c4a475fa0e98d773c3f"
+  integrity sha512-RV16k/qIxW/wWc+mLzV3ARyKUaMUTBy9tOLMzFhtNSKYeTAanQ3a5MudJKf/8arIFnA2L27SNjarQKmFg0w/jA==
+
 "@types/node@22.7.5":
   version "22.7.5"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-22.7.5.tgz#cfde981727a7ab3611a481510b473ae54442b92b"
@@ -1414,10 +1411,10 @@
   dependencies:
     undici-types "~6.19.2"
 
-"@types/node@^18.19.31":
-  version "18.19.67"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.67.tgz#77c4b01641a1e3e1509aff7e10d39e4afd5ae06d"
-  integrity sha512-wI8uHusga+0ZugNp0Ol/3BqQfEcCCNfojtO6Oou9iVNGPTL6QNSdnUdqq85fRgIorLhLMuPIKpsN98QE9Nh+KQ==
+"@types/node@^18.19.67":
+  version "18.19.70"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.70.tgz#5a77508f5568d16fcd3b711c8102d7a430a04df7"
+  integrity sha512-RE+K0+KZoEpDUbGGctnGdkrLFwi1eYKTlIHNl2Um98mUkGsm1u2Ff6Ltd0e8DktTtC98uy7rSj+hO8t/QuLoVQ==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1430,11 +1427,6 @@ abitype@0.9.8:
   version "0.9.8"
   resolved "https://registry.yarnpkg.com/abitype/-/abitype-0.9.8.tgz#1f120b6b717459deafd213dfbf3a3dd1bf10ae8c"
   integrity sha512-puLifILdm+8sjyss4S+fsUN09obiT1g2YW6CtcQF+QDzxR0euzgEB29MZujC6zMk2a6SVmtttq1fc6+YFA7WYQ==
-
-abitype@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/abitype/-/abitype-1.0.0.tgz#237176dace81d90d018bebf3a45cb42f2a2d9e97"
-  integrity sha512-NMeMah//6bJ56H5XRj8QCV4AwuW6hB6zqz2LnhhLdcWVQOsXki6/Pn3APeqxCma62nXIcmZWdu1DlHWS74umVQ==
 
 abitype@1.0.6:
   version "1.0.6"
@@ -2362,6 +2354,14 @@ prettier-plugin-solidity@1.3.1:
     semver "^7.5.4"
     solidity-comments-extractor "^0.0.8"
 
+prettier-plugin-solidity@^1.4.1:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-solidity/-/prettier-plugin-solidity-1.4.2.tgz#d4f6173674e73a29731a8c79c45ab6f5246310df"
+  integrity sha512-VVD/4XlDjSzyPWWCPW8JEleFa8JNKFYac5kNlMjVXemQyQZKfpekPMhFZSePuXB6L+RixlFvWe20iacGjFYrLw==
+  dependencies:
+    "@solidity-parser/parser" "^0.19.0"
+    semver "^7.6.3"
+
 prettier@1.18.2:
   version "1.18.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.18.2.tgz#6823e7c5900017b4bd3acf46fe9ac4b4d7bda9ea"
@@ -2376,6 +2376,11 @@ prettier@^2.8.3:
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
+
+prettier@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.4.2.tgz#a5ce1fb522a588bf2b78ca44c6e6fe5aa5a2b13f"
+  integrity sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==
 
 process@^0.11.1:
   version "0.11.10"
@@ -2448,7 +2453,7 @@ safer-buffer@^2.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-semver@^7.5.2, semver@^7.5.4:
+semver@^7.5.2, semver@^7.5.4, semver@^7.6.3:
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.3.tgz#980f7b5550bc175fb4dc09403085627f9eb33143"
   integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
@@ -2484,15 +2489,15 @@ slice-ansi@^4.0.0:
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
 
-solhint-config-mud@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/solhint-config-mud/-/solhint-config-mud-2.0.1.tgz#a74eac36cc9a9458f8d541e3121b454da6d28684"
-  integrity sha512-c/tZgXe9JNR23lUfMgj2IiQxG8rBsX5sRchgvro82jMMdWcRqZ0XxKTsgvGUbGrndsfC7KhBDcB6Q83CPuUZ4w==
+solhint-config-mud@^2.2.14:
+  version "2.2.14"
+  resolved "https://registry.yarnpkg.com/solhint-config-mud/-/solhint-config-mud-2.2.14.tgz#6348ffed367a48e332dea9d843f4010a101dd965"
+  integrity sha512-sixbU3FsOaDXGbrZft76RWqds7d4akc2YR8DV9vpb8kovDBvqjWpEc0XyQPHOpd8FXVTgh0fd6jYPeghBS9Cpw==
 
-solhint-plugin-mud@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/solhint-plugin-mud/-/solhint-plugin-mud-2.0.1.tgz#7302f3d8d12a098b64be8c245dfe1e6207d45a5c"
-  integrity sha512-aLGqzJ/DDu6wTIPlUCeBunXT9kzk/xAse66zOa6D5ZJzBg5xUlFr6HBCpOVUzNxR4Go4kDNiOwtN9Txb8c0bng==
+solhint-plugin-mud@^2.2.14:
+  version "2.2.14"
+  resolved "https://registry.yarnpkg.com/solhint-plugin-mud/-/solhint-plugin-mud-2.2.14.tgz#0ac68c3fa0b1b76497cf4fc2f3e9217ebf700b12"
+  integrity sha512-6mkftf9yRk3DO/bvZZQzy9YSlWAlBs5EktpEMEHgxcebFnPEj7Dyj7K05a9a5h7tZbUM3Buw1qscoftR5/8gEQ==
   dependencies:
     "@solidity-parser/parser" "^0.16.0"
 
@@ -2690,20 +2695,6 @@ viem@2.21.19:
     isows "1.0.6"
     webauthn-p256 "0.0.10"
     ws "8.18.0"
-
-viem@2.9.20:
-  version "2.9.20"
-  resolved "https://registry.yarnpkg.com/viem/-/viem-2.9.20.tgz#71c6a45d22a8150072adee3dcb7a93fff5347d16"
-  integrity sha512-PHb1MrBHMrSZ8Ayuk3Y/6wUTcMbzlACQaM6AJBSv9kRKX3xYSZ/kehi+gvS0swQJeAlTQ4eZM7jsHQJNAOarmg==
-  dependencies:
-    "@adraffy/ens-normalize" "1.10.0"
-    "@noble/curves" "1.2.0"
-    "@noble/hashes" "1.3.2"
-    "@scure/bip32" "1.3.2"
-    "@scure/bip39" "1.2.1"
-    abitype "1.0.0"
-    isows "1.0.3"
-    ws "8.13.0"
 
 viem@^1.19.9:
   version "1.21.4"

@@ -8,21 +8,13 @@ import { LibInventoryManagement } from "../libraries/LibInventoryManagement.sol"
 import { LibLandAccess } from "../libraries/LibLandAccess.sol";
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { IWETH9, IWETH9WithdrawTo } from "../interfaces/IWETH9.sol";
-
+import { MarketPlaceListingDTO } from "../libraries/Types.sol";
 
 contract MarketplaceSystem is System, LandAccessOperator {
 
     event MarketplaceItemListed(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity);
     event MarketplaceItemPurchased(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity);
     event MarketplaceItemCancelled(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity);
-
-    struct MarketPlaceListingDTO {
-        uint256 listingId;
-        uint256 owner;
-        uint256 itemId;
-        uint256 unitPrice;
-        uint256 quantity;
-    }
 
     function listItem(uint256 landId, uint256 itemId, uint256 price, uint256 quantity) public onlyLandOperator(landId) {
         require(LibInventoryManagement.itemBalanceOf(landId, itemId) >= quantity, "Marketplace: insufficient quantity");

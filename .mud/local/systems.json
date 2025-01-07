@@ -1,0 +1,532 @@
+{
+  "systems": [
+    {
+      "namespaceLabel": "",
+      "label": "CatalogueSystem",
+      "namespace": "",
+      "name": "CatalogueSystem",
+      "systemId": "0x73790000000000000000000000000000436174616c6f67756553797374656d00",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "function getTotalCost((uint256 itemId, uint256 quantity)[] items) view returns (uint256 totalCost)",
+        "function getTotalCostAndSufficientBalanceToPurchaseItem(uint256 landId, uint256 itemId, uint256 quantity) view returns (bool sufficient, uint256 totalCost)",
+        "function getTotalCostAndSufficientBalanceToPurchaseItems(uint256 landId, (uint256 itemId, uint256 quantity)[] items) view returns (bool sufficient, uint256 totalCost)",
+        "function purchaseCatalogueItem(uint256 landId, uint256 itemId, uint256 quantity)",
+        "function purchaseCatalogueItems(uint256 landId, (uint256 itemId, uint256 quantity)[] items)",
+        "function upsertCatalogueItems((uint256 itemId, uint256 price, uint256 catalogueId, bool exists)[] items)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "function getTotalCost((uint256 itemId, uint256 quantity)[] items) view returns (uint256 totalCost)",
+        "function getTotalCostAndSufficientBalanceToPurchaseItem(uint256 landId, uint256 itemId, uint256 quantity) view returns (bool sufficient, uint256 totalCost)",
+        "function getTotalCostAndSufficientBalanceToPurchaseItems(uint256 landId, (uint256 itemId, uint256 quantity)[] items) view returns (bool sufficient, uint256 totalCost)",
+        "function purchaseCatalogueItem(uint256 landId, uint256 itemId, uint256 quantity)",
+        "function purchaseCatalogueItems(uint256 landId, (uint256 itemId, uint256 quantity)[] items)",
+        "function upsertCatalogueItems((uint256 itemId, uint256 price, uint256 catalogueId, bool exists)[] items)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "CraftingSystem",
+      "namespace": "",
+      "name": "CraftingSystem",
+      "systemId": "0x737900000000000000000000000000004372616674696e6753797374656d0000",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event CraftRecipe(uint256 landId, uint256 output, uint256[] inputs, uint256[] quantities)",
+        "event CraftRecipeXpReward(uint256 landId, uint256 totalXp, uint256 xp)",
+        "function craftRecipe(uint256 landId, uint256 output)",
+        "function createRecipe((uint256 output, uint256 outputQuantity, uint256 xp, bool exists, uint256[] inputs, uint256[] quantities) recipe)",
+        "function createRecipes((uint256 output, uint256 outputQuantity, uint256 xp, bool exists, uint256[] inputs, uint256[] quantities)[] recipes)",
+        "function removeRecipe((uint256 output, uint256 outputQuantity, uint256 xp, bool exists, uint256[] inputs, uint256[] quantities) recipe)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event CraftRecipe(uint256 landId, uint256 output, uint256[] inputs, uint256[] quantities)",
+        "event CraftRecipeXpReward(uint256 landId, uint256 totalXp, uint256 xp)",
+        "function craftRecipe(uint256 landId, uint256 output)",
+        "function createRecipe((uint256 output, uint256 outputQuantity, uint256 xp, bool exists, uint256[] inputs, uint256[] quantities) recipe)",
+        "function createRecipes((uint256 output, uint256 outputQuantity, uint256 xp, bool exists, uint256[] inputs, uint256[] quantities)[] recipes)",
+        "function removeRecipe((uint256 output, uint256 outputQuantity, uint256 xp, bool exists, uint256[] inputs, uint256[] quantities) recipe)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "GuildSystem",
+      "namespace": "",
+      "name": "GuildSystem",
+      "systemId": "0x737900000000000000000000000000004775696c6453797374656d0000000000",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event GuildAdminChanged(uint32 guildId, uint256 landId)",
+        "event GuildCreated(uint32 guildId, string guildName, uint256 guildAdmin)",
+        "event GuildMemberAdded(uint32 guildId, uint256 landId)",
+        "event GuildMemberRemoved(uint32 guildId, uint256 landId)",
+        "function acceptGuildInvitation(uint256 landId, uint32 guildId)",
+        "function claimGuildAdmin(uint256 landId)",
+        "function createGuild(uint256 landId, string guildName) returns (uint32 guildId)",
+        "function exitGuild(uint256 landId)",
+        "function getAllGuilds() view returns ((uint32 guildId, uint256 guildAdmin, string guildName, uint256[] guildMembers)[] guilds)",
+        "function getGuildIdByName(string guildName) view returns (uint32 guildId)",
+        "function getGuildNameHash(string guildName) pure returns (bytes32)",
+        "function guildNameHasValidCharacters(string guildName) pure returns (bool)",
+        "function guildNameInUse(string guildName) view returns (bool)",
+        "function inviteToGuild(uint256 landId, uint256 invitedLandId)",
+        "function kickFromGuild(uint256 landId, uint256 kickedLandId)",
+        "function setNewGuildAdmin(uint256 landId, uint256 newAdminId)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event GuildAdminChanged(uint32 guildId, uint256 landId)",
+        "event GuildCreated(uint32 guildId, string guildName, uint256 guildAdmin)",
+        "event GuildMemberAdded(uint32 guildId, uint256 landId)",
+        "event GuildMemberRemoved(uint32 guildId, uint256 landId)",
+        "function acceptGuildInvitation(uint256 landId, uint32 guildId)",
+        "function claimGuildAdmin(uint256 landId)",
+        "function createGuild(uint256 landId, string guildName) returns (uint32 guildId)",
+        "function exitGuild(uint256 landId)",
+        "function getAllGuilds() view returns ((uint32 guildId, uint256 guildAdmin, string guildName, uint256[] guildMembers)[] guilds)",
+        "function getGuildIdByName(string guildName) view returns (uint32 guildId)",
+        "function getGuildNameHash(string guildName) pure returns (bytes32)",
+        "function guildNameHasValidCharacters(string guildName) pure returns (bool)",
+        "function guildNameInUse(string guildName) view returns (bool)",
+        "function inviteToGuild(uint256 landId, uint256 invitedLandId)",
+        "function kickFromGuild(uint256 landId, uint256 kickedLandId)",
+        "function setNewGuildAdmin(uint256 landId, uint256 newAdminId)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandConfigSystem",
+      "namespace": "",
+      "name": "LandConfigSystem",
+      "systemId": "0x737900000000000000000000000000004c616e64436f6e66696753797374656d",
+      "abi": [
+        "function approveLandOperator(uint256 landId, address operator, bool status)",
+        "function getActiveStoves(uint256 stoveId) view returns (uint256)",
+        "function getCookingCost() view returns (uint256)",
+        "function getLandInfo(uint256 landId) view returns ((uint256 limitX, uint256 limitY, uint256 activeTables, uint256 activeStoves, bool isInitialized, uint32 seed, uint256 tokenBalance, uint256 cumulativeXp, uint256 lastLevelClaimed, uint256[] yBound) landInfo)",
+        "function getLandTablesAndChairsAddress() view returns (address)",
+        "function getSoftCostPerSquare() view returns (uint256)",
+        "function getSoftDestinationAddress() view returns (address)",
+        "function getSoftToken() view returns (address)",
+        "function setChair(uint256 _chair, bool _isChair)",
+        "function setChunkSize(uint256 chunkSize)",
+        "function setCookingCost(uint256 cookingCost_)",
+        "function setIsStackable(uint256 _base, uint256 _input, bool _isStackable)",
+        "function setItemConfigAddress(address itemConfigAddress_)",
+        "function setItems((uint256 itemId, (bool nonRemovable, bool nonPlaceable, bool isTool, bool isTable, bool isChair, bool isRotatable, uint256 themeId, uint256 itemCategory, uint256 returnsItem) itemInfo)[] items)",
+        "function setItems(address items)",
+        "function setLandNFTs(address landNFTs_)",
+        "function setLandQuestTaskProgressUpdateAddress(address landQuestTaskProgressUpdateAddress_)",
+        "function setLandTablesAndChairsAddress(address landTablesAndChairsAddress_)",
+        "function setLandTransformAddress(address landTransformAddress_)",
+        "function setMaxLevel(uint256 maxLevel_)",
+        "function setMinStartingLimits(uint256 minStartingX, uint256 minStartingY)",
+        "function setNonPlaceable(uint256 _nonPlaceable, bool _placeable)",
+        "function setNonPlaceableItems(uint256[] items)",
+        "function setNonRemovable(uint256 _nonRemovables, bool _removable)",
+        "function setNonRemovableItems(uint256[] items)",
+        "function setRedistributor(address _redistributor)",
+        "function setReturnItems(uint256[] items, uint256[] itemsReturned)",
+        "function setReturnsItem(uint256 _itemId, uint256 _itemReturned)",
+        "function setRotatable(uint256[] _itemIds, bool _isRotatable)",
+        "function setSoftCostPerSquare(uint256 softCost_)",
+        "function setSoftDestination(address softDestination_)",
+        "function setSoftToken(address softToken_)",
+        "function setStackableItems((uint256 base, uint256 input, bool stackable)[] stackableItems)",
+        "function setTable(uint256 _table, bool _isTable)",
+        "function setTool(uint256 _tool, bool _isTool)",
+        "function setVesting(address vesting_)"
+      ],
+      "worldAbi": [
+        "function approveLandOperator(uint256 landId, address operator, bool status)",
+        "function getActiveStoves(uint256 stoveId) view returns (uint256)",
+        "function getCookingCost() view returns (uint256)",
+        "function getLandInfo(uint256 landId) view returns ((uint256 limitX, uint256 limitY, uint256 activeTables, uint256 activeStoves, bool isInitialized, uint32 seed, uint256 tokenBalance, uint256 cumulativeXp, uint256 lastLevelClaimed, uint256[] yBound) landInfo)",
+        "function getLandTablesAndChairsAddress() view returns (address)",
+        "function getSoftCostPerSquare() view returns (uint256)",
+        "function getSoftDestinationAddress() view returns (address)",
+        "function getSoftToken() view returns (address)",
+        "function setChair(uint256 _chair, bool _isChair)",
+        "function setChunkSize(uint256 chunkSize)",
+        "function setCookingCost(uint256 cookingCost_)",
+        "function setIsStackable(uint256 _base, uint256 _input, bool _isStackable)",
+        "function setItemConfigAddress(address itemConfigAddress_)",
+        "function setItems((uint256 itemId, (bool nonRemovable, bool nonPlaceable, bool isTool, bool isTable, bool isChair, bool isRotatable, uint256 themeId, uint256 itemCategory, uint256 returnsItem) itemInfo)[] items)",
+        "function setItems(address items)",
+        "function setLandNFTs(address landNFTs_)",
+        "function setLandQuestTaskProgressUpdateAddress(address landQuestTaskProgressUpdateAddress_)",
+        "function setLandTablesAndChairsAddress(address landTablesAndChairsAddress_)",
+        "function setLandTransformAddress(address landTransformAddress_)",
+        "function setMaxLevel(uint256 maxLevel_)",
+        "function setMinStartingLimits(uint256 minStartingX, uint256 minStartingY)",
+        "function setNonPlaceable(uint256 _nonPlaceable, bool _placeable)",
+        "function setNonPlaceableItems(uint256[] items)",
+        "function setNonRemovable(uint256 _nonRemovables, bool _removable)",
+        "function setNonRemovableItems(uint256[] items)",
+        "function setRedistributor(address _redistributor)",
+        "function setReturnItems(uint256[] items, uint256[] itemsReturned)",
+        "function setReturnsItem(uint256 _itemId, uint256 _itemReturned)",
+        "function setRotatable(uint256[] _itemIds, bool _isRotatable)",
+        "function setSoftCostPerSquare(uint256 softCost_)",
+        "function setSoftDestination(address softDestination_)",
+        "function setSoftToken(address softToken_)",
+        "function setStackableItems((uint256 base, uint256 input, bool stackable)[] stackableItems)",
+        "function setTable(uint256 _table, bool _isTable)",
+        "function setTool(uint256 _tool, bool _isTool)",
+        "function setVesting(address vesting_)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandCreationSystem",
+      "namespace": "",
+      "name": "LandCreationSyst",
+      "systemId": "0x737900000000000000000000000000004c616e644372656174696f6e53797374",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event LandCreated(uint256 indexed landId, address indexed owner, uint256 limitX, uint256 limitY)",
+        "event LandExpanded(uint256 indexed landId, uint256 x1, uint256 y1)",
+        "event LandPurchase(uint256 indexed landId, uint256 area, uint256 cost)",
+        "function calculateArea(uint256 x, uint256 y) pure returns (uint256 area)",
+        "function calculateExpansionArea(uint256 landId, uint256 x1, uint256 y1) view returns (uint256 area)",
+        "function calculateLandCost(uint256 x0, uint256 y0) view returns (uint256 cost)",
+        "function calculateLandExpansionCost(uint256 landId, uint256 x1, uint256 y1) view returns (uint256 cost)",
+        "function calculateLandInitialPurchaseCost() view returns (uint256 cost)",
+        "function calculateVrgdaCost(uint256 area) view returns (uint256 vrgdaCost)",
+        "function createLand(uint256 limitX, uint256 limitY) payable returns (uint256 landId)",
+        "function createPlayerInitialLand() payable returns (uint256 landId)",
+        "function expandLand(uint256 landId, uint256 x1, uint256 y1) payable",
+        "function generateChunk(uint256 landId)",
+        "function setInitialLandItems((uint256 x, uint256 y, uint256 z, uint256 itemId, bool rotated)[] items, uint256 landIndex, uint256 _initialLandItemsDefaultIndex)",
+        "function setInitialLandLimits(uint256 limitX, uint256 limitY)",
+        "function setLandName(uint256 landId, string name)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event LandCreated(uint256 indexed landId, address indexed owner, uint256 limitX, uint256 limitY)",
+        "event LandExpanded(uint256 indexed landId, uint256 x1, uint256 y1)",
+        "event LandPurchase(uint256 indexed landId, uint256 area, uint256 cost)",
+        "function calculateArea(uint256 x, uint256 y) pure returns (uint256 area)",
+        "function calculateExpansionArea(uint256 landId, uint256 x1, uint256 y1) view returns (uint256 area)",
+        "function calculateLandCost(uint256 x0, uint256 y0) view returns (uint256 cost)",
+        "function calculateLandExpansionCost(uint256 landId, uint256 x1, uint256 y1) view returns (uint256 cost)",
+        "function calculateLandInitialPurchaseCost() view returns (uint256 cost)",
+        "function calculateVrgdaCost(uint256 area) view returns (uint256 vrgdaCost)",
+        "function createLand(uint256 limitX, uint256 limitY) payable returns (uint256 landId)",
+        "function createPlayerInitialLand() payable returns (uint256 landId)",
+        "function expandLand(uint256 landId, uint256 x1, uint256 y1) payable",
+        "function generateChunk(uint256 landId)",
+        "function setInitialLandItems((uint256 x, uint256 y, uint256 z, uint256 itemId, bool rotated)[] items, uint256 landIndex, uint256 _initialLandItemsDefaultIndex)",
+        "function setInitialLandLimits(uint256 limitX, uint256 limitY)",
+        "function setLandName(uint256 landId, string name)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandERC1155HolderSystem",
+      "namespace": "",
+      "name": "LandERC1155Holde",
+      "systemId": "0x737900000000000000000000000000004c616e6445524331313535486f6c6465",
+      "abi": [
+        "function onERC1155BatchReceived(address, address, uint256[], uint256[], bytes) returns (bytes4)",
+        "function onERC1155Received(address, address, uint256, uint256, bytes) returns (bytes4)"
+      ],
+      "worldAbi": [
+        "function onERC1155BatchReceived(address, address, uint256[], uint256[], bytes) returns (bytes4)",
+        "function onERC1155Received(address, address, uint256, uint256, bytes) returns (bytes4)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandItemInteractionSystem",
+      "namespace": "",
+      "name": "LandItemInteract",
+      "systemId": "0x737900000000000000000000000000004c616e644974656d496e746572616374",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "error TransformationIncompatible(uint256 base, uint256 input)",
+        "function moveItem(uint256 landId, uint256 srcX, uint256 srcY, uint256 dstX, uint256 dstY)",
+        "function placeItem(uint256 landId, uint256 x, uint256 y, uint256 itemId)",
+        "function removeItem(uint256 landId, uint256 x, uint256 y)",
+        "function timestampCheck()",
+        "function toggleRotation(uint256 landId, uint256 x, uint256 y, uint256 z)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "error TransformationIncompatible(uint256 base, uint256 input)",
+        "function moveItem(uint256 landId, uint256 srcX, uint256 srcY, uint256 dstX, uint256 dstY)",
+        "function placeItem(uint256 landId, uint256 x, uint256 y, uint256 itemId)",
+        "function removeItem(uint256 landId, uint256 x, uint256 y)",
+        "function timestampCheck()",
+        "function toggleRotation(uint256 landId, uint256 x, uint256 y, uint256 z)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandItemsSystem",
+      "namespace": "",
+      "name": "LandItemsSystem",
+      "systemId": "0x737900000000000000000000000000004c616e644974656d7353797374656d00",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "function depositItems(uint256 landId, uint256[] itemIds, uint256[] amounts)",
+        "function itemBalanceOf(uint256 landId, uint256 itemId) view returns (uint256)",
+        "function itemBalanceOfBatch(uint256 landId, uint256[] ids) view returns (uint256[])",
+        "function withdrawItems(uint256 landId, uint256[] itemIds, uint256[] amounts)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "function depositItems(uint256 landId, uint256[] itemIds, uint256[] amounts)",
+        "function itemBalanceOf(uint256 landId, uint256 itemId) view returns (uint256)",
+        "function itemBalanceOfBatch(uint256 landId, uint256[] ids) view returns (uint256[])",
+        "function withdrawItems(uint256 landId, uint256[] itemIds, uint256[] amounts)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandQuestsSystem",
+      "namespace": "",
+      "name": "LandQuestsSystem",
+      "systemId": "0x737900000000000000000000000000004c616e6451756573747353797374656d",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "function activateAllQuestGroups(uint256 landId)",
+        "function activateLandQuestGroup(uint256 landId, uint256 questGroupId)",
+        "function getActiveLandQuestGroups(uint256 landId) view returns ((uint256 landId, uint256 questGroupId, (bool active, uint256 numberOfQuests, uint256 numberOfCompletedQuests, bool claimed, uint256 expiresAt) landQuestGroup, (uint256 landId, uint256 questGroupId, uint256 questId, (uint256 numberOfTasks, uint256 numberOfCompletedTasks, bool claimed, bool active, uint256 expiresAt) landQuest, (bytes32 taskId, uint256 landId, uint256 questGroupId, uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, (uint256 taskProgress, bool taskCompleted) landQuestTask)[] landQuestTasks)[] landQuests)[])",
+        "function getLandQuestGroup(uint256 landId, uint256 questGroupId) view returns ((uint256 landId, uint256 questGroupId, (bool active, uint256 numberOfQuests, uint256 numberOfCompletedQuests, bool claimed, uint256 expiresAt) landQuestGroup, (uint256 landId, uint256 questGroupId, uint256 questId, (uint256 numberOfTasks, uint256 numberOfCompletedTasks, bool claimed, bool active, uint256 expiresAt) landQuest, (bytes32 taskId, uint256 landId, uint256 questGroupId, uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, (uint256 taskProgress, bool taskCompleted) landQuestTask)[] landQuestTasks)[] landQuests))",
+        "function removeAllExpiredQuestGroups(uint256 landId)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "function activateAllQuestGroups(uint256 landId)",
+        "function activateLandQuestGroup(uint256 landId, uint256 questGroupId)",
+        "function getActiveLandQuestGroups(uint256 landId) view returns ((uint256 landId, uint256 questGroupId, (bool active, uint256 numberOfQuests, uint256 numberOfCompletedQuests, bool claimed, uint256 expiresAt) landQuestGroup, (uint256 landId, uint256 questGroupId, uint256 questId, (uint256 numberOfTasks, uint256 numberOfCompletedTasks, bool claimed, bool active, uint256 expiresAt) landQuest, (bytes32 taskId, uint256 landId, uint256 questGroupId, uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, (uint256 taskProgress, bool taskCompleted) landQuestTask)[] landQuestTasks)[] landQuests)[])",
+        "function getLandQuestGroup(uint256 landId, uint256 questGroupId) view returns ((uint256 landId, uint256 questGroupId, (bool active, uint256 numberOfQuests, uint256 numberOfCompletedQuests, bool claimed, uint256 expiresAt) landQuestGroup, (uint256 landId, uint256 questGroupId, uint256 questId, (uint256 numberOfTasks, uint256 numberOfCompletedTasks, bool claimed, bool active, uint256 expiresAt) landQuest, (bytes32 taskId, uint256 landId, uint256 questGroupId, uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, (uint256 taskProgress, bool taskCompleted) landQuestTask)[] landQuestTasks)[] landQuests))",
+        "function removeAllExpiredQuestGroups(uint256 landId)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandScenarioUserTestingSystem",
+      "namespace": "",
+      "name": "LandScenarioUser",
+      "systemId": "0x737900000000000000000000000000004c616e645363656e6172696f55736572",
+      "abi": [
+        "event LandCreated(uint256 indexed landId, address indexed owner, uint256 limitX, uint256 limitY)",
+        "function createUserTestScerarioLand(address player, uint256 limitX, uint256 limitY, (uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[] landItems)",
+        "function resetUserTestLandScenario(uint256 landId, uint256 limitX, uint256 limitY, (uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[] landItems)"
+      ],
+      "worldAbi": [
+        "event LandCreated(uint256 indexed landId, address indexed owner, uint256 limitX, uint256 limitY)",
+        "function createUserTestScerarioLand(address player, uint256 limitX, uint256 limitY, (uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[] landItems)",
+        "function resetUserTestLandScenario(uint256 landId, uint256 limitX, uint256 limitY, (uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[] landItems)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandTokensSystem",
+      "namespace": "",
+      "name": "LandTokensSystem",
+      "systemId": "0x737900000000000000000000000000004c616e64546f6b656e7353797374656d",
+      "abi": [
+        "function tokenBalanceOf(uint256 landId) view returns (uint256)"
+      ],
+      "worldAbi": [
+        "function tokenBalanceOf(uint256 landId) view returns (uint256)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LandViewSystem",
+      "namespace": "",
+      "name": "LandViewSystem",
+      "systemId": "0x737900000000000000000000000000004c616e645669657753797374656d0000",
+      "abi": [
+        "function getActiveTables(uint256 landId) view returns (uint256)",
+        "function getChairsOfTables(uint256 landId, uint256 x, uint256 y) view returns (uint256[3])",
+        "function getLandItems(uint256 landId, uint256 x, uint256 y) view returns ((uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[] landItems)",
+        "function getLandItems3d(uint256 landId) view returns ((uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[][][] land3d)",
+        "function getPlacementTime(uint256 landId, uint256 x, uint256 y) view returns (uint256)",
+        "function getRotation(uint256 landId, uint256 x, uint256 y) view returns (bool)",
+        "function getTablesOfChairs(uint256 landId, uint256 x, uint256 y) view returns (uint256[3])",
+        "function getTotalEarned(uint256 landId) view returns ((uint256 landId, uint256 totalEarned, uint256 totalSpent) playerTotalEarned)"
+      ],
+      "worldAbi": [
+        "function getActiveTables(uint256 landId) view returns (uint256)",
+        "function getChairsOfTables(uint256 landId, uint256 x, uint256 y) view returns (uint256[3])",
+        "function getLandItems(uint256 landId, uint256 x, uint256 y) view returns ((uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[] landItems)",
+        "function getLandItems3d(uint256 landId) view returns ((uint256 x, uint256 y, uint256 itemId, uint256 placementTime, uint256 stackIndex, bool isRotated, uint256 dynamicUnlockTime, uint256 dynamicTimeoutTime)[][][] land3d)",
+        "function getPlacementTime(uint256 landId, uint256 x, uint256 y) view returns (uint256)",
+        "function getRotation(uint256 landId, uint256 x, uint256 y) view returns (bool)",
+        "function getTablesOfChairs(uint256 landId, uint256 x, uint256 y) view returns (uint256[3])",
+        "function getTotalEarned(uint256 landId) view returns ((uint256 landId, uint256 totalEarned, uint256 totalSpent) playerTotalEarned)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "LevelingSystem",
+      "namespace": "",
+      "name": "LevelingSystem",
+      "systemId": "0x737900000000000000000000000000004c6576656c696e6753797374656d0000",
+      "abi": [
+        "function unlockAllLevels(uint256 landId)",
+        "function unlockLevel(uint256 landId, uint256 level)",
+        "function unlockLevels(uint256 landId, uint256[] levels)",
+        "function upsertLevelReward((uint256 level, uint256 tokens, uint256 cumulativeXp, uint256[] items) levelReward)",
+        "function upsertLevelRewards((uint256 level, uint256 tokens, uint256 cumulativeXp, uint256[] items)[] levelRewards)"
+      ],
+      "worldAbi": [
+        "function unlockAllLevels(uint256 landId)",
+        "function unlockLevel(uint256 landId, uint256 level)",
+        "function unlockLevels(uint256 landId, uint256[] levels)",
+        "function upsertLevelReward((uint256 level, uint256 tokens, uint256 cumulativeXp, uint256[] items) levelReward)",
+        "function upsertLevelRewards((uint256 level, uint256 tokens, uint256 cumulativeXp, uint256[] items)[] levelRewards)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "MarketplaceSystem",
+      "namespace": "",
+      "name": "MarketplaceSyste",
+      "systemId": "0x737900000000000000000000000000004d61726b6574706c6163655379737465",
+      "abi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event MarketplaceItemCancelled(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity)",
+        "event MarketplaceItemListed(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity)",
+        "event MarketplaceItemPurchased(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity)",
+        "function buyItem(uint256 landId, uint256 listingId, uint256 quantity) payable",
+        "function cancelListing(uint256 landId, uint256 listingId)",
+        "function editListing(uint256 landId, uint256 listingId, uint256 price, uint256 quantity)",
+        "function getAllListings() view returns ((uint256 listingId, uint256 owner, uint256 itemId, uint256 unitPrice, uint256 quantity)[] marketPlaceListings)",
+        "function getListing(uint256 listingId) view returns ((uint256 listingId, uint256 owner, uint256 itemId, uint256 unitPrice, uint256 quantity) marketPlaceListing)",
+        "function listItem(uint256 landId, uint256 itemId, uint256 price, uint256 quantity)"
+      ],
+      "worldAbi": [
+        "error AccessByNoOperator(address owner, address caller)",
+        "event MarketplaceItemCancelled(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity)",
+        "event MarketplaceItemListed(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity)",
+        "event MarketplaceItemPurchased(uint256 indexed landId, uint256 listingId, uint256 itemId, uint256 price, uint256 quantity)",
+        "function buyItem(uint256 landId, uint256 listingId, uint256 quantity) payable",
+        "function cancelListing(uint256 landId, uint256 listingId)",
+        "function editListing(uint256 landId, uint256 listingId, uint256 price, uint256 quantity)",
+        "function getAllListings() view returns ((uint256 listingId, uint256 owner, uint256 itemId, uint256 unitPrice, uint256 quantity)[] marketPlaceListings)",
+        "function getListing(uint256 listingId) view returns ((uint256 listingId, uint256 owner, uint256 itemId, uint256 unitPrice, uint256 quantity) marketPlaceListing)",
+        "function listItem(uint256 landId, uint256 itemId, uint256 price, uint256 quantity)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "QuestsDTOSystem",
+      "namespace": "",
+      "name": "QuestsDTOSystem",
+      "systemId": "0x7379000000000000000000000000000051756573747344544f53797374656d00",
+      "abi": [
+        "function addNewQuest((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards) questDTO)",
+        "function addNewQuests((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] quests)",
+        "function addRewards((uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewardDTO)",
+        "function getAllActiveQuestGroups() view returns ((uint256 id, (uint256 startsAt, uint256 expiresAt, bool sequential, uint256 questGroupType, uint256[] questIds, uint256[] rewardIds) questGroup, (uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] quests, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] questGroups)",
+        "function getAllQuests() view returns ((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] quests)",
+        "function getQuest(uint256 questId) view returns ((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards) questDTO)",
+        "function updateQuest(uint256 questId, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest)",
+        "function upsertQuestCollections((uint256 questGroupType, uint256[] questIds)[] questCollections)",
+        "function upsertRewardColletions((uint256 rewardType, uint256[] rewardIds)[] rewardCollections)",
+        "function upsertTransformationCategories((uint256 base, uint256 input, uint256[] categories)[] transformationCategories)"
+      ],
+      "worldAbi": [
+        "function addNewQuest((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards) questDTO)",
+        "function addNewQuests((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] quests)",
+        "function addRewards((uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewardDTO)",
+        "function getAllActiveQuestGroups() view returns ((uint256 id, (uint256 startsAt, uint256 expiresAt, bool sequential, uint256 questGroupType, uint256[] questIds, uint256[] rewardIds) questGroup, (uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] quests, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] questGroups)",
+        "function getAllQuests() view returns ((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards)[] quests)",
+        "function getQuest(uint256 questId) view returns ((uint256 id, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest, (bytes32 taskId, (uint256 questId, uint256 taskType, bytes32 key, uint256 quantity, bool exists, string name, bytes32[] taskKeys) task)[] tasks, (uint256 id, (uint256 itemId, uint256 rewardType, uint256 quantity) reward)[] rewards) questDTO)",
+        "function updateQuest(uint256 questId, (uint256 duration, bool exists, string questName, uint256[] rewardIds, bytes32[] tasks) quest)",
+        "function upsertQuestCollections((uint256 questGroupType, uint256[] questIds)[] questCollections)",
+        "function upsertRewardColletions((uint256 rewardType, uint256[] rewardIds)[] rewardCollections)",
+        "function upsertTransformationCategories((uint256 base, uint256 input, uint256[] categories)[] transformationCategories)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "QuestsSystem",
+      "namespace": "",
+      "name": "QuestsSystem",
+      "systemId": "0x7379000000000000000000000000000051756573747353797374656d00000000",
+      "abi": [
+        "function createDailyQuestIfNotExists()",
+        "function createWeeklyQuestIfNotExists()",
+        "function getAllActiveQuestGroupIds() view returns (uint256[] questGroupIds)"
+      ],
+      "worldAbi": [
+        "function createDailyQuestIfNotExists()",
+        "function createWeeklyQuestIfNotExists()",
+        "function getAllActiveQuestGroupIds() view returns (uint256[] questGroupIds)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "TransformationsSystem",
+      "namespace": "",
+      "name": "TransformationsS",
+      "systemId": "0x737900000000000000000000000000005472616e73666f726d6174696f6e7353",
+      "abi": [
+        "function getTransformation(uint256 base, uint256 input) view returns ((uint256 next, uint256 yield, uint256 inputNext, uint256 yieldQuantity, uint256 unlockTime, uint256 timeout, uint256 timeoutYield, uint256 timeoutYieldQuantity, uint256 timeoutNext, bool isRecipe, bool isWaterCollection, uint256 xp, bool exists) transformation)",
+        "function setTransformation((uint256 base, uint256 input, uint256 next, uint256 yield, uint256 inputNext, uint256 yieldQuantity, uint256 unlockTime, uint256 timeout, uint256 timeoutYield, uint256 timeoutYieldQuantity, uint256 timeoutNext, bool isRecipe, bool isWaterCollection, uint256 xp, bool exists) newTransformation)",
+        "function setTransformations((uint256 base, uint256 input, uint256 next, uint256 yield, uint256 inputNext, uint256 yieldQuantity, uint256 unlockTime, uint256 timeout, uint256 timeoutYield, uint256 timeoutYieldQuantity, uint256 timeoutNext, bool isRecipe, bool isWaterCollection, uint256 xp, bool exists)[] newTransformations)"
+      ],
+      "worldAbi": [
+        "function getTransformation(uint256 base, uint256 input) view returns ((uint256 next, uint256 yield, uint256 inputNext, uint256 yieldQuantity, uint256 unlockTime, uint256 timeout, uint256 timeoutYield, uint256 timeoutYieldQuantity, uint256 timeoutNext, bool isRecipe, bool isWaterCollection, uint256 xp, bool exists) transformation)",
+        "function setTransformation((uint256 base, uint256 input, uint256 next, uint256 yield, uint256 inputNext, uint256 yieldQuantity, uint256 unlockTime, uint256 timeout, uint256 timeoutYield, uint256 timeoutYieldQuantity, uint256 timeoutNext, bool isRecipe, bool isWaterCollection, uint256 xp, bool exists) newTransformation)",
+        "function setTransformations((uint256 base, uint256 input, uint256 next, uint256 yield, uint256 inputNext, uint256 yieldQuantity, uint256 unlockTime, uint256 timeout, uint256 timeoutYield, uint256 timeoutYieldQuantity, uint256 timeoutNext, bool isRecipe, bool isWaterCollection, uint256 xp, bool exists)[] newTransformations)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "VrgdaSystem",
+      "namespace": "",
+      "name": "VrgdaSystem",
+      "systemId": "0x73790000000000000000000000000000567267646153797374656d0000000000",
+      "abi": [
+        "function setVrgdaParameters(int256 _targetPrice, int256 _priceDecayPercent, int256 _perTimeUnit)"
+      ],
+      "worldAbi": [
+        "function setVrgdaParameters(int256 _targetPrice, int256 _priceDecayPercent, int256 _perTimeUnit)"
+      ]
+    },
+    {
+      "namespaceLabel": "",
+      "label": "WaterControllerSystem",
+      "namespace": "",
+      "name": "WaterControllerS",
+      "systemId": "0x737900000000000000000000000000005761746572436f6e74726f6c6c657253",
+      "abi": [
+        "error AxiomV2QueryAddressIsZero()",
+        "error CallerMustBeAxiomV2Query()",
+        "event AxiomV2Call(uint64 indexed sourceChainId, address caller, bytes32 indexed querySchema, uint256 indexed queryId)",
+        "event AxiomV2OffchainCall(uint64 indexed sourceChainId, address caller, bytes32 indexed querySchema, uint256 indexed queryId)",
+        "function axiomV2Callback(uint64 sourceChainId, address caller, bytes32 querySchema, uint256 queryId, bytes32[] axiomResults, bytes extraData)",
+        "function axiomV2OffchainCallback(uint64 sourceChainId, address caller, bytes32 querySchema, uint256 queryId, bytes32[] axiomResults, bytes extraData)",
+        "function axiomV2QueryAddress() view returns (address)",
+        "function getWaterYieldTime() view returns (uint256)",
+        "function InitialiseWaterController(address _axiomV2QueryAddress, uint64 _callbackSourceChainId, bytes32 _querySchema)",
+        "function setAxionV2QueryAddress(address _axiomV2QueryAddress)",
+        "function setWaterControllerParameters(uint256 numSamples, uint256 blockInterval, uint256 minYieldTime, uint256 maxYieldTime, uint256 endBlockSlippage, int256 minDelta, int256 maxDelta)"
+      ],
+      "worldAbi": [
+        "error AxiomV2QueryAddressIsZero()",
+        "error CallerMustBeAxiomV2Query()",
+        "event AxiomV2Call(uint64 indexed sourceChainId, address caller, bytes32 indexed querySchema, uint256 indexed queryId)",
+        "event AxiomV2OffchainCall(uint64 indexed sourceChainId, address caller, bytes32 indexed querySchema, uint256 indexed queryId)",
+        "function axiomV2Callback(uint64 sourceChainId, address caller, bytes32 querySchema, uint256 queryId, bytes32[] axiomResults, bytes extraData)",
+        "function axiomV2OffchainCallback(uint64 sourceChainId, address caller, bytes32 querySchema, uint256 queryId, bytes32[] axiomResults, bytes extraData)",
+        "function axiomV2QueryAddress() view returns (address)",
+        "function getWaterYieldTime() view returns (uint256)",
+        "function InitialiseWaterController(address _axiomV2QueryAddress, uint64 _callbackSourceChainId, bytes32 _querySchema)",
+        "function setAxionV2QueryAddress(address _axiomV2QueryAddress)",
+        "function setWaterControllerParameters(uint256 numSamples, uint256 blockInterval, uint256 minYieldTime, uint256 maxYieldTime, uint256 endBlockSlippage, int256 minDelta, int256 maxDelta)"
+      ]
+    }
+  ],
+  "createdAt": 1736219457690
+}

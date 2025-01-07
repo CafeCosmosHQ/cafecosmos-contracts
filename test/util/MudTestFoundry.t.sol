@@ -53,11 +53,14 @@ import { CatalogueItem } from "../../src/codegen/tables/CatalogueItem.sol";
 import { ClaimedLevels } from "../../src/codegen/tables/ClaimedLevels.sol";
 import { ConfigAddresses } from "../../src/codegen/tables/ConfigAddresses.sol";
 import { CraftingRecipe } from "../../src/codegen/tables/CraftingRecipe.sol";
-import { GuildExists } from "../../src/codegen/tables/GuildExists.sol";
+import { Guild } from "../../src/codegen/tables/Guild.sol";
 import { GuildInvitation } from "../../src/codegen/tables/GuildInvitation.sol";
+import { GuildUniqueName } from "../../src/codegen/tables/GuildUniqueName.sol";
+import { Guilds } from "../../src/codegen/tables/Guilds.sol";
 import { Inventory } from "../../src/codegen/tables/Inventory.sol";
 import { ItemInfo } from "../../src/codegen/tables/ItemInfo.sol";
 import { LandCell } from "../../src/codegen/tables/LandCell.sol";
+import { LandGuild } from "../../src/codegen/tables/LandGuild.sol";
 import { LandInfo } from "../../src/codegen/tables/LandInfo.sol";
 import { LandItem } from "../../src/codegen/tables/LandItem.sol";
 import { LandItemCookingState } from "../../src/codegen/tables/LandItemCookingState.sol";
@@ -69,6 +72,8 @@ import { LandQuestTaskProgress } from "../../src/codegen/tables/LandQuestTaskPro
 import { LandTablesAndChairs } from "../../src/codegen/tables/LandTablesAndChairs.sol";
 import { LevelReward } from "../../src/codegen/tables/LevelReward.sol";
 import { MarketplaceListings } from "../../src/codegen/tables/MarketplaceListings.sol";
+import { MarketplaceNonce } from "../../src/codegen/tables/MarketplaceNonce.sol";
+import { PlayerTotalEarned } from "../../src/codegen/tables/PlayerTotalEarned.sol";
 import { Quest } from "../../src/codegen/tables/Quest.sol";
 import { QuestCollection } from "../../src/codegen/tables/QuestCollection.sol";
 import { QuestGroup } from "../../src/codegen/tables/QuestGroup.sol";
@@ -123,11 +128,14 @@ contract MudTestFoundry is Test {
         ClaimedLevels.register();
         ConfigAddresses.register();
         CraftingRecipe.register();
-        GuildExists.register();
+        Guild.register();
         GuildInvitation.register();
+        GuildUniqueName.register();
+        Guilds.register();
         Inventory.register();
         ItemInfo.register();
         LandCell.register();
+        LandGuild.register();
         LandInfo.register();
         LandItem.register();
         LandItemCookingState.register();
@@ -139,6 +147,8 @@ contract MudTestFoundry is Test {
         LandTablesAndChairs.register();
         LevelReward.register();
         MarketplaceListings.register();
+        MarketplaceNonce.register();
+        PlayerTotalEarned.register();
         Quest.register();
         QuestCollection.register();
         QuestGroup.register();
@@ -211,12 +221,18 @@ contract MudTestFoundry is Test {
         addFunctionSelector("Crafting", "createRecipes((uint256,uint256,uint256,bool,uint256[],uint256[])[])");
         addFunctionSelector("Crafting", "removeRecipe((uint256,uint256,uint256,bool,uint256[],uint256[]))");
 
-        addFunctionSelector("Guild", "acceptGuildInvitation(uint256,string)");
+        addFunctionSelector("Guild", "acceptGuildInvitation(uint256,uint32)");
+        addFunctionSelector("Guild", "claimGuildAdmin(uint256)");
         addFunctionSelector("Guild", "createGuild(uint256,string)");
         addFunctionSelector("Guild", "exitGuild(uint256)");
-        addFunctionSelector("Guild", "getGuildId(string)");
+        addFunctionSelector("Guild", "getAllGuilds");
+        addFunctionSelector("Guild", "getGuildIdByName(string)");
+        addFunctionSelector("Guild", "getGuildNameHash(string)");
+        addFunctionSelector("Guild", "guildNameHasValidCharacters(string)");
+        addFunctionSelector("Guild", "guildNameInUse(string)");
         addFunctionSelector("Guild", "inviteToGuild(uint256,uint256)");
         addFunctionSelector("Guild", "kickFromGuild(uint256,uint256)");
+        addFunctionSelector("Guild", "setNewGuildAdmin(uint256,uint256)");
 
         addFunctionSelector("LandConfig", "approveLandOperator(uint256,address,bool)");
         addFunctionSelector("LandConfig", "getActiveStoves(uint256)");
@@ -247,7 +263,7 @@ contract MudTestFoundry is Test {
         addFunctionSelector("LandConfig", "setReturnItems(uint256[],uint256[])");
         addFunctionSelector("LandConfig", "setReturnsItem(uint256,uint256)");
         addFunctionSelector("LandConfig", "setRotatable(uint256[],bool)");
-        addFunctionSelector("LandConfig", "setSoftCost(uint256)");
+        addFunctionSelector("LandConfig", "setSoftCostPerSquare(uint256)");
         addFunctionSelector("LandConfig", "setSoftDestination(address)");
         addFunctionSelector("LandConfig", "setSoftToken(address)");
         addFunctionSelector("LandConfig", "setStackableItems((uint256,uint256,bool)[])");
@@ -255,13 +271,17 @@ contract MudTestFoundry is Test {
         addFunctionSelector("LandConfig", "setTool(uint256,bool)");
         addFunctionSelector("LandConfig", "setVesting(address)");
 
-        addFunctionSelector("LandCreation", "calculateLandCost(uint256,uint256,uint256)");
+        addFunctionSelector("LandCreation", "calculateArea(uint256,uint256)");
+        addFunctionSelector("LandCreation", "calculateExpansionArea(uint256,uint256,uint256)");
         addFunctionSelector("LandCreation", "calculateLandCost(uint256,uint256)");
+        addFunctionSelector("LandCreation", "calculateLandExpansionCost(uint256,uint256,uint256)");
+        addFunctionSelector("LandCreation", "calculateLandInitialPurchaseCost");
+        addFunctionSelector("LandCreation", "calculateVrgdaCost(uint256)");
         addFunctionSelector("LandCreation", "createLand(uint256,uint256)");
-        addFunctionSelector("LandCreation", "createPlayerInitialFreeLand");
+        addFunctionSelector("LandCreation", "createPlayerInitialLand");
         addFunctionSelector("LandCreation", "expandLand(uint256,uint256,uint256)");
         addFunctionSelector("LandCreation", "generateChunk(uint256)");
-        addFunctionSelector("LandCreation", "setInitialLandItems((uint256,uint256,uint256)[],uint256,uint256)");
+        addFunctionSelector("LandCreation", "setInitialLandItems((uint256,uint256,uint256,uint256,bool)[],uint256,uint256)");
         addFunctionSelector("LandCreation", "setInitialLandLimits(uint256,uint256)");
         addFunctionSelector("LandCreation", "setLandName(uint256,string)");
 
@@ -273,7 +293,6 @@ contract MudTestFoundry is Test {
         addFunctionSelector("LandItemInteraction", "removeItem(uint256,uint256,uint256)");
         addFunctionSelector("LandItemInteraction", "timestampCheck");
         addFunctionSelector("LandItemInteraction", "toggleRotation(uint256,uint256,uint256,uint256)");
-        addFunctionSelector("LandItemInteraction", "updateStove(uint256,uint256,uint256)");
 
         addFunctionSelector("LandItems", "depositItems(uint256,uint256[],uint256[])");
         addFunctionSelector("LandItems", "itemBalanceOf(uint256,uint256)");
@@ -289,9 +308,7 @@ contract MudTestFoundry is Test {
         addFunctionSelector("LandScenarioUserTesting", "createUserTestScerarioLand(address,uint256,uint256,(uint256,uint256,uint256,uint256,uint256,bool,uint256,uint256)[])");
         addFunctionSelector("LandScenarioUserTesting", "resetUserTestLandScenario(uint256,uint256,uint256,(uint256,uint256,uint256,uint256,uint256,bool,uint256,uint256)[])");
 
-        addFunctionSelector("LandTokens", "depositTokens(uint256,uint256)");
         addFunctionSelector("LandTokens", "tokenBalanceOf(uint256)");
-        addFunctionSelector("LandTokens", "withdrawTokens(uint256,uint256)");
 
         addFunctionSelector("LandView", "getActiveTables(uint256)");
         addFunctionSelector("LandView", "getChairsOfTables(uint256,uint256,uint256)");
@@ -300,6 +317,7 @@ contract MudTestFoundry is Test {
         addFunctionSelector("LandView", "getPlacementTime(uint256,uint256,uint256)");
         addFunctionSelector("LandView", "getRotation(uint256,uint256,uint256)");
         addFunctionSelector("LandView", "getTablesOfChairs(uint256,uint256,uint256)");
+        addFunctionSelector("LandView", "getTotalEarned(uint256)");
 
         addFunctionSelector("Leveling", "unlockAllLevels(uint256)");
         addFunctionSelector("Leveling", "unlockLevel(uint256,uint256)");
@@ -308,6 +326,10 @@ contract MudTestFoundry is Test {
         addFunctionSelector("Leveling", "upsertLevelRewards((uint256,uint256,uint256,uint256[])[])");
 
         addFunctionSelector("Marketplace", "buyItem(uint256,uint256,uint256)");
+        addFunctionSelector("Marketplace", "cancelListing(uint256,uint256)");
+        addFunctionSelector("Marketplace", "editListing(uint256,uint256,uint256,uint256)");
+        addFunctionSelector("Marketplace", "getAllListings");
+        addFunctionSelector("Marketplace", "getListing(uint256)");
         addFunctionSelector("Marketplace", "listItem(uint256,uint256,uint256,uint256)");
 
         addFunctionSelector("QuestsDTO", "addNewQuest((uint256,(uint256,bool,string,uint256[],bytes32[]),(bytes32,(uint256,uint256,bytes32,uint256,bool,string,bytes32[]))[],(uint256,(uint256,uint256,uint256))[]))");

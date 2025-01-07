@@ -20,3 +20,11 @@ struct LevelRewardDTO {
     uint256[] items;
 }
 
+
+struct MarketPlaceListingDTO {
+    uint256 listingId;
+    uint256 owner;
+    uint256 itemId;
+    uint256 unitPrice;
+    uint256 quantity;
+}

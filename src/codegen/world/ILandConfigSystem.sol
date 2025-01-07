@@ -42,7 +42,7 @@ interface ILandConfigSystem {
 
   function setMaxLevel(uint256 maxLevel_) external;
 
-  function setSoftCost(uint256 softCost_) external;
+  function setSoftCostPerSquare(uint256 softCost_) external;
 
   function setCookingCost(uint256 cookingCost_) external;
 

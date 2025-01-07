@@ -16,7 +16,6 @@
     "circuit:compile": "npx axiom compile axiom/circuit.ts --function feeAverage --inputs data/inputs/defaultInput.json --provider $PROVIDER_URI_GOERLI",
     "circuit:run": "npx axiom run axiom/circuit.ts --function feeAverage --inputs data/inputs/input.json --provider $PROVIDER_URI_GOERLI"
   },
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "@axiom-crypto/client": "0.1.1",
@@ -31,11 +30,11 @@
   },
   "dependencies": {
     "@axiom-crypto/client": "0.1.1",
-    "@latticexyz/cli": "file:../../mud/packages/cli",
-    "@latticexyz/schema-type": "file:../../mud/packages/schema-type",
-    "@latticexyz/store": "file:../../mud/packages/store",
-    "@latticexyz/world": "file:../../mud/packages/world",
-    "@latticexyz/world-modules": "file:../../mud/packages/world-modules",
+    "@latticexyz/cli": "^2.2.14",
+    "@latticexyz/schema-type": "2.2.14",
+    "@latticexyz/store": "^2.2.14",
+    "@latticexyz/world": "^2.2.14",
+    "@latticexyz/world-modules": "^2.2.14",
     "@openzeppelin/contracts": "^4.9.6",
     "@openzeppelin/contracts-upgradeable": "^4.9.6"
   }

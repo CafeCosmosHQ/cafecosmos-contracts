@@ -21,11 +21,11 @@ interface ILandCreationSystem {
     uint256 _initialLandItemsDefaultIndex
   ) external;
 
-  function createPlayerInitialLand(bool useWeth) external payable returns (uint256 landId);
+  function createPlayerInitialLand() external payable returns (uint256 landId);
 
-  function createLand(uint256 limitX, uint256 limitY, bool useWeth) external payable returns (uint256 landId);
+  function createLand(uint256 limitX, uint256 limitY) external payable returns (uint256 landId);
 
-  function expandLand(uint256 landId, uint256 x1, uint256 y1, bool useWeth) external payable;
+  function expandLand(uint256 landId, uint256 x1, uint256 y1) external payable;
 
   function generateChunk(uint256 landId) external;
 
@@ -35,7 +35,9 @@ interface ILandCreationSystem {
 
   function calculateVrgdaCost(uint256 area) external view returns (uint256 vrgdaCost);
 
-  function calculateArea(uint256 landId, uint256 x1, uint256 y1) external view returns (uint256 area);
+  function calculateArea(uint256 x, uint256 y) external pure returns (uint256 area);
+
+  function calculateExpansionArea(uint256 landId, uint256 x1, uint256 y1) external view returns (uint256 area);
 
   function calculateLandInitialPurchaseCost() external view returns (uint256 cost);
 }
