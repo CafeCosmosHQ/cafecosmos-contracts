@@ -1,0 +1,173 @@
+ID,Name,Category
+1,Avocado,Ingredients
+2,Bananas,Ingredients
+3,Butter,Ingredients
+4,Cheese,Ingredients
+6,Dough,Ingredients
+7,Dust,Ingredients
+8,Egg,Ingredients
+9,Flour,Ingredients
+10,Ham,Ingredients
+11,Meat,Ingredients
+12,Raspberry,Ingredients
+13,Sugar,Ingredients
+14,Tomato,Ingredients
+15,Olives,Ingredients
+16,Olive Oil,Ingredients
+17,Whipped Cream,Ingredients
+18,Wheat,Ingredients
+128,Coffee Bean,Ingredients
+129,Lettuce,Ingredients
+983,Pasta,Ingredients
+19,Bismuth,RawMaterials
+20,Crystal,RawMaterials
+21,Bismuth Ingot,RawMaterials
+22,Clay,RawMaterials
+23,Sticks,RawMaterials
+24,Purple Wood,RawMaterials
+25,Pink Wood,RawMaterials
+1022,Black Trapezoid,Misc
+26,Flux Capacitor,Misc
+27,Glass,Misc
+28,Wire,Misc
+29,Blade,Misc
+1007,Pole,Misc
+30,Croissant,Recipes
+31,Cupcake,Recipes
+32,Smoothie,Recipes
+982,Banana Milk,Recipes
+33,Burger,Recipes
+34,Pizza,Recipes
+123,Salad,Recipes
+911,Shawarma,Recipes
+5,Coffee,Ingredients
+984,Mac and Cheese,Recipes
+35,Fertilizer,Gardening
+36,Tilled Soil,Gardening
+37,Lettuce Seed,Lettuce
+38,Lettuce Small,Lettuce
+39,Lettuce Medium,Lettuce
+40,Lettuce Almost,Lettuce
+41,Lettuce Grown,Lettuce
+42,Lettuce Small Dead,Lettuce
+130,Lettuce Medium Dead,Lettuce
+131,Lettuce Almost Dead,Lettuce
+49,Wheat Seed,Wheat
+50,Wheat Small,Wheat
+51,Wheat Medium,Wheat
+52,Wheat Almost,Wheat
+53,Wheat Grown,Wheat
+54,Wheat Small Dead,Wheat
+134,Wheat Medium Dead,Wheat
+135,Wheat Almost Dead,Wheat
+55,Grass Lettuce,Grass
+113,Grass Tomato,Grass
+114,Grass Wheat,Grass
+56,Raspberry Bush,Bushes
+57,Coffee Bush,Bushes
+58,Raspberry Bush Empty,Bushes
+59,Coffee Bush Empty,Bushes
+43,Tomato Seed,Tomato
+44,Tomato Small,Tomato
+45,Tomato Medium,Tomato
+46,Tomato Almost,Tomato
+47,Tomato Grown,Tomato
+48,Tomato Small Dead,Tomato
+132,Tomato Medium Dead,Tomato
+133,Tomato Almost Dead,Tomato
+60,Avocado Tree,Trees
+61,Banana Tree,Trees
+62,Olive Tree,Trees
+63,Sugar Tree,Trees
+64,Avocado Tree Empty,Trees
+65,Banana Tree Empty,Trees
+66,Olive Tree Empty,Trees
+67,Sugar Tree Empty,Trees
+115,Simple Tree,Trees
+1009,Big Tree,Trees
+68,Mixer,Machines
+69,Mixer Mixing Flour,Machines
+985,Mixer Mixing Wheat,Machines
+1005,Mixer Mixing Milk,Machines
+72,Butter Churner,Machines
+73,Butter Churner Churning,Machines
+74,Oil Maker,Machines
+75,Oil Maker Pressing Olives,Machines
+76,Cheese Maker,Machines
+986,Cheese Maker Making Cheese,Machines
+987,Furnace,Machines
+77,Furnace Smelting Bismuth,Machines
+78,Water Well,Machines
+988,Water Well Giving Water,Machines
+136,Robot,Machines
+989,Robot Making Ham,Machines
+990,Robot Making Meat,Machines
+991,Pasta Machine,Machines
+992,Pasta Machine Making Pasta,Machines
+1011,Water Tank Empty,Machines
+1012,Water Tank 1 Bucket Water,Machines
+1013,Water Tank 2 Bucket Water,Machines
+1014,Water Tank 3 Bucket Water,Machines
+1015,Water Tank 4 Bucket Water,Machines
+1016,Water Tank 5 Bucket Water,Machines
+1017,Water Tank 6 Bucket Water,Machines
+1018,Water Tank 7 Bucket Water,Machines
+1019,Water Tank 8 Bucket Water,Machines
+1020,Water Tank 9 Bucket Water,Machines
+1021,Water Tank 10 Bucket Water,Machines
+79,Coffee Machine,Cooking
+993,Crazy Coffee Machine,Cooking
+80,Oven,Cooking
+81,Crazy Oven,Cooking
+82,Cutting Board,Cooking
+995,Crazy Cutting Board,Cooking
+83,Blender,Cooking
+996,Crazy Blender,Cooking
+977,Oven Cooking Burger,Cooking
+976,Oven Cooking Croissant,Cooking
+975,Oven Cooking Pizza,Cooking
+974,Oven Cooking Cupcake,Cooking
+1006,Oven Cooking Mac and Cheese,Cooking
+997,Crazy Oven Cooking Burger,Cooking
+998,Crazy Oven Cooking Croissant,Cooking
+999,Crazy Oven Cooking Pizza,Cooking
+1000,Crazy Oven Cooking Cupcake,Cooking
+1001,Crazy Oven Cooking Mac and Cheese,Cooking
+981,Cutting Board Chopping Salad,Cooking
+1002,Crazy Cutting Board Chopping Salad,Cooking
+979,Blender Blending Smoothie,Cooking
+980,Blender Blending Banana Milk,Cooking
+1003,Crazy Blender Blending Smoothie,Cooking
+1004,Crazy Blender Blending Banana Milk,Cooking
+963,Kebab Machine,Cooking
+978,Kebab Machine Cooking Shawarma,Cooking
+89,Green Chair,Furniture
+90,Pink Chair,Furniture
+92,Green Table,Furniture
+93,Purple Table,Furniture
+94,Pink Table,Furniture
+116,Bar Table,Furniture
+95,Plant,Decorations
+96,Fence,Decorations
+97,Pink Floor,Decorations
+98,Purple Floor,Decorations
+99,Wall,Decorations
+100,Wall With Planet Sign,Decorations
+101,Wall With Window,Decorations
+102,Wall With Menu,Decorations
+124,Planet Sign,Decorations
+125,Window,Decorations
+126,Wall Menu,Decorations
+103,Cow,Animals
+1008,Cow Giving Milk,Animals
+104,Chicken,Animals
+105,Milk,Buckets
+106,Water,Buckets
+107,Empty Bucket,Buckets
+108,Scythe,Tools
+109,Watering Can,Tools
+1010,Watering Can Full,Tools
+110,Pickaxe,Tools
+111,Axe,Tools
+112,Hoe,Tools
+127,Hand,Tools

@@ -135,7 +135,6 @@ export default defineWorld({
         landTransformAddress: "address",
         landTablesAndChairsAddress: "address",
         landQuestTaskProgressUpdateAddress: "address",
-        vrgdaAddress: "address"
       },
       key: []
     },
